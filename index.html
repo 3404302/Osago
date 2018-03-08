@@ -1,0 +1,43 @@
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>тест</title>
+ 
+		<script>
+		function Calc() {
+			var a = +document.getElementById('a').value;
+			var b = +document.getElementById('b').value;
+
+			var c = a * b;
+            var d = a + b;
+ 
+			document.getElementById('result').innerHTML = a + " * " + b + " = " + c;
+            document.getElementById('result1').innerHTML = a + " + " + b + " = " + d;
+            
+		}
+		</script>
+	</head>
+	<body>
+		<form>
+			<select size="7" name="Срок страхования" id="a">
+        <option disabled>Выберите срок</option>
+        <option value="1">1 мес</option>
+        <option value="2">2 мес</option>
+        <option value="3">3 мес</option>
+        <option value="4">4 мес</option>
+    </select>
+			<select size="7" name="Лош силы" id="b">
+        <option disabled>Выбери л.с.</option>
+        <option value='1.1'>100</option>
+        <option value='1.2'>200</option>
+        <option value='1.3'>300</option>
+        <option value='1.4'>400</option>
+    </select>
+			<input type="button" value="Сложить 2 два числа" onclick="Calc();"><br>
+		</form>
+	<div id="result"></div>
+    <div id="result1"></div>
+	</body>
+</html>
