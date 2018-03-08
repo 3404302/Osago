@@ -4,40 +4,103 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>тест</title>
- 
-		<script>
-		function Calc() {
-			var a = +document.getElementById('a').value;
-			var b = +document.getElementById('b').value;
-
-			var c = a * b;
-            var d = a + b;
- 
-			document.getElementById('result').innerHTML = a + " * " + b + " = " + c;
-            document.getElementById('result1').innerHTML = a + " + " + b + " = " + d;
-            
-		}
-		</script>
 	</head>
 	<body>
+        <script src="js/Calc.js"></script>
 		<form>
-			<select size="7" name="Срок страхования" id="a">
-        <option disabled>Выберите срок</option>
-        <option value="1">1 мес</option>
-        <option value="2">2 мес</option>
-        <option value="3">3 мес</option>
-        <option value="4">4 мес</option>
-    </select>
-			<select size="7" name="Лош силы" id="b">
-        <option disabled>Выбери л.с.</option>
-        <option value='1.1'>100</option>
-        <option value='1.2'>200</option>
-        <option value='1.3'>300</option>
-        <option value='1.4'>400</option>
-    </select>
-			<input type="button" value="Сложить 2 два числа" onclick="Calc();"><br>
-		</form>
-	<div id="result"></div>
-    <div id="result1"></div>
-	</body>
+            <p>Выбери</p>
+            <select size="7" name="form-tb" id="tb">
+                <option disabled>Категория</option>
+                <option value="1">КатА</option>
+                <option value="1">КатB</option>
+                <option value="1">КатС</option>
+                <option value="1">КатD</option>
+            </select>
+            <select size="7" name="form-kt" id="kt">
+                <option disabled>Регион</option>
+                <option value="2">Москва</option>
+                <option value="1.7">МО</option>
+                <option value="1.8" hidden>Питер</option>
+                <option value="1.6" hidden>ЛО</option>
+            </select>
+            <select size="7" name="form-kbm" id="kbm">
+                <option disabled>Кбм</option>
+                <option value='2.45'>М</option>
+                <option value='2.3'>0</option>
+                <option value='1.55'>1</option>
+                <option value='1.4'>2</option>
+                <option value='1' selected>3</option>
+                <option value='0.95'>4</option>
+                <option value='0.9'>5</option>
+                <option value='0.85'>6</option>
+                <option value='0.8'>7</option>
+                <option value='0.75'>8</option>
+                <option value='0.7'>9</option>
+                <option value='0.65'>10</option>
+                <option value='0.6'>11</option>
+                <option value='0.55'>12</option>
+                <option value='0.5'>13</option>
+            </select>
+            <select size="7" name="form-kvs" id="kvs">
+                <option disabled>Возр стаж</option>
+                <option value='1'>Свыше 22 свыше 3 лет</option>
+                <option value='1.6'>До 22 свыше 3 лет</option>
+                <option value='1.7'>Свыше 22 до 3 лет</option>
+                <option value='1.8'>До 22 до 3 лет</option>
+            </select>
+            <div>
+                <input type="checkbox" id="ko" name="form-ko" value="1.8">
+                <label for="form-ko">Без ограничений?</label>
+            </div>
+            <select size="7" name="form-km" id="km">
+                <option disabled>Мощность</option>
+                <option value='1.6'>Свыше 150 лс</option>
+                <option value='1.4'>120-150 лс</option>
+                <option value='1.2'>100-120 лс</option>
+                <option value='1.1'>70-100 лс</option>
+                <option value='1'>50-70 лс</option>
+                <option value='0.6'>До 50 лс</option>
+            </select>
+            <select size="7" name="form-kp" id="kp">
+                <option disabled>Период использования</option>
+                <option value='1'>10 - 21 мес</option>
+                <option value='0.95'>9 мес</option>
+                <option value='0.9'>8 мес</option>
+                <option value='0.8'>7 мес</option>
+                <option value='0.7'>6 мес</option>
+                <option value='0.65'>5 мес</option>
+                <option value='0.6'>4 мес</option>
+                <option value='0.5'>3 мес</option>
+                <option value='0.4'>2 мес</option>
+                <option value='0.3'>от 16 дн до 1 мес</option>
+                <option value='0.2'>от 5 до 15 дней</option>
+            </select>
+            <select size="7" name="form-kpr" id="kpr">
+                <option disabled>Прицеп (заменить на чекбокс от категории)</option>
+                <option value='1.4'>Грузовые до 16 т.</option>
+                <option value='1.25'>Грузовые свыше 16 т.</option>
+                <option value='1.16'>Легковые юрики</option>
+                <option value='1.16'>Мотоциклы</option>
+            </select>
+            <input type="button" value="Рассчитать" onclick="Calc();"><br>
+        </form>
+        <div id="result"></div>
+        <div id="result1"></div>
+        
+        
+<div>
+<p>Формула расчета стоимости ОСАГО следующая:</p>
+<p>П = ТБ x КТ x КБМ x КВС x КО x КМ x КС x КН x КП, где</p>
+<p>ТБ — Базовый тариф; </p>
+<p>КТ — Территориальный коэффициент; <b>готово</b></p>
+<p>КБМ — Коэффициент бонус-малус; <b>готово</b></p>
+<p>КВС — Коэффициент возраст-стаж; <b>готово</b></p>
+<p>КО — Ограничивающий коэффициент; <b>готово</b></p>
+<p>КМ — Коэффициент мощности двигателя; <b>готово</b></p>
+<p>КС — Коэффициент сезонности;</p>
+<p>КН — Коэффициент нарушений;</p>
+<p>КП — Коэффициент срока страхования. <b>готово</b></p>
+        </div>
+    </body>
 </html>
+
