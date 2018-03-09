@@ -101,15 +101,40 @@
                 <option value='1.25'>Грузовые свыше 16 т.</option>
                 <option value='1.16'>Легковые юрики</option>
                 <option value='1.16'>Мотоциклы</option>
+                <option value='1'>Без прицепа</option>
             </select>
     </p>
             <p>
             <input type="button" value="Рассчитать" onclick="Calc();">
                 </p>
         </form>
-        <div id="result"></div>
-        <div id="result1"></div>
-        
+        <table border="1">
+            <caption>Результат расчетов</caption>
+            <tr>
+                <th>Страховая компания</th>
+                <th>Результат</th>
+                <th>Формула расчета</th>
+                <th>Размер кв</th>
+            </tr>
+            <tr>
+                <td>Наско</td>
+                <td id="result-1"></td>
+                <td id="result"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Макс</td>
+                <td id="result-2"></td>
+                <td id="result2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Росгосстрах</td>
+                <td id="result-3"></td>
+                <td id="result3"></td>
+                <td></td>
+            </tr>
+        </table>       
         
 <div>
 <p>Формула расчета стоимости ОСАГО следующая:</p>
