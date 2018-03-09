@@ -7,23 +7,35 @@
 	</head>
 	<body>
         <script src="js/Calc.js"></script>
-		<form>
-            <p>Выбери</p>
-            <select size="7" name="form-tb" id="tb">
-                <option disabled>Категория</option>
-                <option value="1">КатА</option>
-                <option value="1">КатB</option>
-                <option value="1">КатС</option>
-                <option value="1">КатD</option>
-            </select>
-            <select size="7" name="form-kt" id="kt">
+        <div>Калькулятор осаго ТЕСТ</div>
+		<form label="Выбери">
+            <p>
+                <select name="form-type" id="type">
+                    <option disabled>ФЛ\ЮЛ</option>
+                    <option value="1">Физ лицо</option>
+                    <option value="1">Юр лицо</option>
+                </select>
+            </p>
+            <p>
+                <select name="form-tb" id="tb">
+                    <option disabled>Категория</option>
+                    <option value="1">КатА</option>
+                    <option value="1">КатB</option>
+                    <option value="1">КатС</option>
+                    <option value="1">КатD</option>
+                </select>
+            </p>
+            <p>
+            <select name="form-kt" id="kt">
                 <option disabled>Регион</option>
                 <option value="2">Москва</option>
                 <option value="1.7">МО</option>
                 <option value="1.8" hidden>Питер</option>
                 <option value="1.6" hidden>ЛО</option>
             </select>
-            <select size="7" name="form-kbm" id="kbm">
+                </p>
+            <p>
+            <select name="form-kbm" id="kbm">
                 <option disabled>Кбм</option>
                 <option value='2.45'>М</option>
                 <option value='2.3'>0</option>
@@ -41,18 +53,22 @@
                 <option value='0.55'>12</option>
                 <option value='0.5'>13</option>
             </select>
-            <select size="7" name="form-kvs" id="kvs">
+            </p>
+            <p>
+            <select name="form-kvs" id="kvs">
                 <option disabled>Возр стаж</option>
                 <option value='1'>Свыше 22 свыше 3 лет</option>
                 <option value='1.6'>До 22 свыше 3 лет</option>
                 <option value='1.7'>Свыше 22 до 3 лет</option>
                 <option value='1.8'>До 22 до 3 лет</option>
             </select>
+        </p>
             <div>
-                <input type="checkbox" id="ko" name="form-ko" value="1.8">
+                <input type="checkbox" id="ko" name="form-ko" value="1">
                 <label for="form-ko">Без ограничений?</label>
             </div>
-            <select size="7" name="form-km" id="km">
+            <p>
+            <select name="form-km" id="km">
                 <option disabled>Мощность</option>
                 <option value='1.6'>Свыше 150 лс</option>
                 <option value='1.4'>120-150 лс</option>
@@ -61,7 +77,9 @@
                 <option value='1'>50-70 лс</option>
                 <option value='0.6'>До 50 лс</option>
             </select>
-            <select size="7" name="form-kp" id="kp">
+            </p>
+            <p>
+            <select name="form-kp" id="kp">
                 <option disabled>Период использования</option>
                 <option value='1'>10 - 21 мес</option>
                 <option value='0.95'>9 мес</option>
@@ -75,14 +93,19 @@
                 <option value='0.3'>от 16 дн до 1 мес</option>
                 <option value='0.2'>от 5 до 15 дней</option>
             </select>
-            <select size="7" name="form-kpr" id="kpr">
+        </p>
+            <p>
+            <select name="form-kpr" id="kpr">
                 <option disabled>Прицеп (заменить на чекбокс от категории)</option>
                 <option value='1.4'>Грузовые до 16 т.</option>
                 <option value='1.25'>Грузовые свыше 16 т.</option>
                 <option value='1.16'>Легковые юрики</option>
                 <option value='1.16'>Мотоциклы</option>
             </select>
-            <input type="button" value="Рассчитать" onclick="Calc();"><br>
+    </p>
+            <p>
+            <input type="button" value="Рассчитать" onclick="Calc();">
+                </p>
         </form>
         <div id="result"></div>
         <div id="result1"></div>
