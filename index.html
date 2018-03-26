@@ -14,7 +14,7 @@
                 <select name="form-type" id="type">
                     <option disabled>ФЛ\ЮЛ</option>
                     <option value="1">Физ лицо</option>
-                    <option value="1">Юр лицо</option>
+                    <option value="2">Юр лицо</option>
                 </select>
             </p>
             <p>
@@ -65,7 +65,7 @@
             </select>
         </p>
             <div>
-                <input type="checkbox" id="ko" name="form-ko" value="1">
+                <input type="checkbox" id="ko" name="form-ko" value='1.8'>
                 <label for="form-ko">Без ограничений?</label>
             </div>
             <p>
@@ -98,11 +98,11 @@
             <p>
             <select name="form-kpr" id="kpr">
                 <option disabled>Прицеп (заменить на чекбокс от категории)</option>
+                <option value='1'>Без прицепа</option>
                 <option value='1.4'>Грузовые до 16 т.</option>
                 <option value='1.25'>Грузовые свыше 16 т.</option>
                 <option value='1.16'>Легковые юрики</option>
                 <option value='1.16'>Мотоциклы</option>
-                <option value='1'>Без прицепа</option>
             </select>
     </p>
             <p>
@@ -119,9 +119,9 @@
             </tr>
             <tr>
                 <td>Наско</td>
-                <td id="result-1"></td>
                 <td id="result"></td>
-                <td></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
             </tr>
             <tr>
                 <td>Макс</td>
