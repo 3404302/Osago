@@ -20,10 +20,10 @@
             <p>
                 <select name="form-tb" id="tb">
                     <option disabled>Категория</option>
+                    <option value="2">КатB</option>
                     <option value="1">КатА</option>
-                    <option value="1">КатB</option>
-                    <option value="1">КатС</option>
-                    <option value="1">КатD</option>
+                    <option value="3">КатС</option>
+                    <option value="4">КатD</option>
                 </select>
             </p>
             <p>
@@ -68,17 +68,13 @@
                 <input type="checkbox" id="ko" name="form-ko" value='1.8'>
                 <label for="form-ko">Без ограничений?</label>
             </div>
+            <!-- Заготовка под ks 
             <p>
-            <select name="form-km" id="km">
-                <option disabled>Мощность</option>
-                <option value='1.6'>Свыше 150 лс</option>
-                <option value='1.4'>120-150 лс</option>
-                <option value='1.2'>100-120 лс</option>
-                <option value='1.1'>70-100 лс</option>
-                <option value='1'>50-70 лс</option>
-                <option value='0.6'>До 50 лс</option>
+            <select name="form-ks" id="ks">
+                <option disabled value='1'>Коэф сезонности</option>
             </select>
             </p>
+            -->
             <p>
             <select name="form-kp" id="kp">
                 <option disabled>Период использования</option>
@@ -94,7 +90,18 @@
                 <option value='0.3'>от 16 дн до 1 мес</option>
                 <option value='0.2'>от 5 до 15 дней</option>
             </select>
-        </p>
+            </p>
+            <p>
+            <select name="form-km" id="km">
+                <option disabled>Мощность</option>
+                <option value='1.6'>Свыше 150 лс</option>
+                <option value='1.4'>120-150 лс</option>
+                <option value='1.2'>100-120 лс</option>
+                <option value='1.1'>70-100 лс</option>
+                <option value='1'>50-70 лс</option>
+                <option value='0.6'>До 50 лс</option>
+            </select>
+            </p>
             <p>
             <select name="form-kpr" id="kpr">
                 <option disabled>Прицеп (заменить на чекбокс от категории)</option>
@@ -104,10 +111,18 @@
                 <option value='1.16'>Легковые юрики</option>
                 <option value='1.16'>Мотоциклы</option>
             </select>
-    </p>
+            </p>
+            
+            <!-- Заготовка под kn
+            <p>
+            <select name="form-kn" id="kn">
+                <option disabled value='1'>Коэф нарушений</option>
+            </select>
+            </p>
+            -->
             <p>
             <input type="button" value="Рассчитать" onclick="Calc();">
-                </p>
+            </p>
         </form>
         <table border="1">
             <caption>Результат расчетов</caption>
@@ -145,10 +160,12 @@
 <p>КБМ — Коэффициент бонус-малус; <b>готово</b></p>
 <p>КВС — Коэффициент возраст-стаж; <b>готово</b></p>
 <p>КО — Ограничивающий коэффициент; <b>готово</b></p>
-<p>КМ — Коэффициент мощности двигателя; <b>готово</b></p>
-<p>КС — Коэффициент сезонности;</p>
-<p>КН — Коэффициент нарушений;</p>
+<p>КС — Коэффициент сезонности;<b>готово</b></p>
 <p>КП — Коэффициент срока страхования. <b>готово</b></p>
+<p>КМ — Коэффициент мощности двигателя; <b>готово</b></p>
+<p>КПР — Коэффициент наличия прицепа; <b>готово</b></p>
+<p>КН — Коэффициент нарушений;<b>готово</b></p>
+https://learn.javascript.ru/comparison
         </div>
     </body>
 </html>
