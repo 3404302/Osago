@@ -19,11 +19,18 @@
             </p>
             <p>
                 <select name="form-tb" id="tb">
-                    <option disabled>Категория</option>
-                    <option value="2">КатB</option>
-                    <option value="1">КатА</option>
-                    <option value="3">КатС</option>
-                    <option value="4">КатD</option>
+                    <option disabled>Категория ТС</option>
+                    <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
+                    <option value="1">КатB (Легковые автомобили)</option>
+                    <option value="2">КатВ (Легковые авто, используемые в качестве такси)</option>
+                    <option value="3">КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
+                    <option value="4">КатC (Грузовые авто, с макс массой более 16 тонн)</option>                    
+                    <option value="5">КатD (Автобусы с числом пасс мест 16 и менее)</option>
+                    <option value="6">КатD (Автобусы с числом пасс мест более 16)</option>
+                    <option value="7">КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
+                    <option value="8">Трамваи</option>
+                    <option value="9">Троллейбусы</option>
+                    <option value="10">Тракторы, самох дорож-строит машины, иные машины</option>
                 </select>
             </p>
             <p>
@@ -38,30 +45,30 @@
             <p>
             <select name="form-kbm" id="kbm">
                 <option disabled>Кбм</option>
-                <option value='2.45'>М</option>
-                <option value='2.3'>0</option>
-                <option value='1.55'>1</option>
-                <option value='1.4'>2</option>
-                <option value='1' selected>3</option>
-                <option value='0.95'>4</option>
-                <option value='0.9'>5</option>
-                <option value='0.85'>6</option>
-                <option value='0.8'>7</option>
-                <option value='0.75'>8</option>
-                <option value='0.7'>9</option>
-                <option value='0.65'>10</option>
-                <option value='0.6'>11</option>
-                <option value='0.55'>12</option>
-                <option value='0.5'>13</option>
+                <option value='2.45'>М (2.45)</option>
+                <option value='2.3'>0 (2.3)</option>
+                <option value='1.55'>1 (1.55)</option>
+                <option value='1.4'>2 (1.4)</option>
+                <option value='1' selected>3 (1)</option>
+                <option value='0.95'>4 (0.95)</option>
+                <option value='0.9'>5 (0.9)</option>
+                <option value='0.85'>6 (0.85)</option>
+                <option value='0.8'>7 (0.8)</option>
+                <option value='0.75'>8 (0.75)</option>
+                <option value='0.7'>9 (0.7)</option>
+                <option value='0.65'>10 (0.65)</option>
+                <option value='0.6'>11 (0.6)</option>
+                <option value='0.55'>12 (0.55)</option>
+                <option value='0.5'>13 (0.5)</option>
             </select>
             </p>
             <p>
             <select name="form-kvs" id="kvs">
                 <option disabled>Возр стаж</option>
                 <option value='1'>Свыше 22 свыше 3 лет</option>
-                <option value='1.6'>До 22 свыше 3 лет</option>
-                <option value='1.7'>Свыше 22 до 3 лет</option>
-                <option value='1.8'>До 22 до 3 лет</option>
+                <option value='1.6'>До 22 вкл свыше 3 лет</option>
+                <option value='1.7'>Свыше 22 до 3 лет вкл</option>
+                <option value='1.8'>До 22 вкл до 3 лет вкл</option>
             </select>
         </p>
             <div>
@@ -95,11 +102,11 @@
             <select name="form-km" id="km">
                 <option disabled>Мощность</option>
                 <option value='1.6'>Свыше 150 лс</option>
-                <option value='1.4'>120-150 лс</option>
-                <option value='1.2'>100-120 лс</option>
-                <option value='1.1'>70-100 лс</option>
-                <option value='1'>50-70 лс</option>
-                <option value='0.6'>До 50 лс</option>
+                <option value='1.4'>120-150 лс вкл</option>
+                <option value='1.2'>100-120 лс вкл</option>
+                <option value='1.1'>70-100 лс вкл</option>
+                <option value='1'>50-70 лс вкл</option>
+                <option value='0.6'>До 50 лс вкл</option>
             </select>
             </p>
             <p>
@@ -145,10 +152,40 @@
                 <td></td>
             </tr>
             <tr>
+                <td>Гайде</td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
+            </tr>
+            <tr>
+                <td>Альфа</td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
+            </tr>
+            <tr>
+                <td>Вск</td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
+            </tr>
+            <tr>
+                <td>Ингосстрах</td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
+            </tr>
+            <tr>
                 <td>Росгосстрах</td>
-                <td id="result-3"></td>
-                <td id="result3"></td>
-                <td></td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
+            </tr>
+            <tr>
+                <td>Ресо</td>
+                <td id="result"></td>
+                <td id="result-1"></td>
+                <td id="result-1-1"></td>
             </tr>
         </table>       
         
