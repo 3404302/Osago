@@ -13,29 +13,29 @@
             <p>
                 <select name="form-type" id="type">
                     <option disabled>ФЛ\ЮЛ</option>
-                    <option value="1">Физ лицо</option>
+                    <option value="1"selected>Физ лицо</option>
                     <option value="2">Юр лицо</option>
                 </select>
             </p>
             <p>
                 <select name="form-tb" id="tb">
-                    <option disabled>Категория ТС</option>
-                    <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
-                    <option value="1">КатB (Легковые автомобили)</option>
-                    <option value="2">КатВ (Легковые авто, используемые в качестве такси)</option>
-                    <option value="3">КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
-                    <option value="4">КатC (Грузовые авто, с макс массой более 16 тонн)</option>                    
-                    <option value="5">КатD (Автобусы с числом пасс мест 16 и менее)</option>
-                    <option value="6">КатD (Автобусы с числом пасс мест более 16)</option>
-                    <option value="7">КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
-                    <option value="8">Трамваи</option>
-                    <option value="9">Троллейбусы</option>
-                    <option value="10">Тракторы, самох дорож-строит машины, иные машины</option>
+                    <option disabled >Категория ТС</option>
+                    <option value="0.5" hidden>КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
+                    <option value="1" selected>КатB (Легковые автомобили)</option>
+                    <option value="2" hidden>КатВ (Легковые авто, используемые в качестве такси)</option>
+                    <option value="3" hidden>КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
+                    <option value="4" hidden>КатC (Грузовые авто, с макс массой более 16 тонн)</option>                    
+                    <option value="5" hidden>КатD (Автобусы с числом пасс мест 16 и менее)</option>
+                    <option value="6" hidden>КатD (Автобусы с числом пасс мест более 16)</option>
+                    <option value="7" hidden>КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
+                    <option value="8" hidden>Трамваи</option>
+                    <option value="9" hidden>Троллейбусы</option>
+                    <option value="10" hidden>Тракторы, самох дорож-строит машины, иные машины</option>
                 </select>
             </p>
             <p>
             <select name="form-kt" id="kt">
-                <option disabled>Регион</option>
+                <option disabled selected>Регион</option>
                 <option value="2">Москва</option>
                 <option value="1.7">МО</option>
                 <option value="1.8" hidden>Питер</option>
@@ -63,6 +63,7 @@
             </select>
             </p>
             <p>
+            <!-- Убираем kvs
             <select name="form-kvs" id="kvs">
                 <option disabled>Возр стаж</option>
                 <option value='1'>Свыше 22 свыше 3 лет</option>
@@ -70,7 +71,30 @@
                 <option value='1.7'>Свыше 22 до 3 лет вкл</option>
                 <option value='1.8'>До 22 вкл до 3 лет вкл</option>
             </select>
-        </p>
+            </p>
+            -->
+            <p>
+            <select name="form-drive" id="drive">
+                <option disabled selected>Стаж</option>
+                <option value='4'>Свыше 3 лет</option>
+                <option value='3'>До 3 лет вкл</option>
+            </select>                
+            </p>
+            <p>
+            <select name="form-birth" id="birth">
+                <option disabled selected>Возраст</option>>
+                <option value='22'>До 22 включительно</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31 и старше</option>
+            </select>                
+            </p>
             <div>
                 <input type="checkbox" id="ko" name="form-ko" value='1.8'>
                 <label for="form-ko">Без ограничений?</label>
@@ -85,7 +109,7 @@
             <p>
             <select name="form-kp" id="kp">
                 <option disabled>Период использования</option>
-                <option value='1'>10 - 21 мес</option>
+                <option value='1' selected>10 - 21 мес</option>
                 <option value='0.95'>9 мес</option>
                 <option value='0.9'>8 мес</option>
                 <option value='0.8'>7 мес</option>
@@ -100,7 +124,7 @@
             </p>
             <p>
             <select name="form-km" id="km">
-                <option disabled>Мощность</option>
+                <option disabled selected>Мощность</option>
                 <option value='1.6'>Свыше 150 лс</option>
                 <option value='1.4'>120-150 лс вкл</option>
                 <option value='1.2'>100-120 лс вкл</option>
@@ -112,7 +136,7 @@
             <p>
             <select name="form-kpr" id="kpr">
                 <option disabled>Прицеп (заменить на чекбокс от категории)</option>
-                <option value='1'>Без прицепа</option>
+                <option value='1' selected>Без прицепа</option>
                 <option value='1.4'>Грузовые до 16 т.</option>
                 <option value='1.25'>Грузовые свыше 16 т.</option>
                 <option value='1.16'>Легковые юрики</option>
@@ -141,15 +165,15 @@
             </tr>
             <tr>
                 <td>Наско</td>
-                <td id="result"></td>
-                <td id="result-1"></td>
-                <td id="result-1-1"></td>
+                <td id="result-nasko"></td>
+                <td id="result-nasko-1"></td>
+                <td id="result-nasko-2"></td>
             </tr>
             <tr>
                 <td>Макс</td>
-                <td id="result-2"></td>
-                <td id="result2"></td>
-                <td></td>
+                <td id="result-maks"></td>
+                <td id="result-maks-1"></td>
+                <td id="result-maks-2"></td>
             </tr>
             <tr>
                 <td>Гайде</td>
