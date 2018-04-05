@@ -25,7 +25,7 @@ function Calc() {
         kvs = 1.8;
     } else if (birth > 22 && drive == 3) {
         kvs = 1.7;
-    } else if (birth == 22 && drive == 4) {
+    } else if (birth == 22 && drive > 3) {
         kvs = 1.6;
     } else {
         kvs = 1;    
@@ -186,12 +186,57 @@ function Calc() {
  * Формула расчета страховой премии ГАЙДЕ
  */
     
+    
+    var tbguideh = 'Базовая ставка Гайде'
+    if (tb == 0.5) {
+        tbguideh = 1579;
+    } else if (tb == 2) {
+        tbguideh = 6166;
+    } else if (tb == 3) {
+        tbguideh = 4211;
+    } else if (tb == 4) {
+        tbguideh = 6341;
+    } else if (tb == 5) {
+        tbguideh = 3370;
+    } else if (tb == 6) {
+        tbguideh = 4211;
+    } else if (tb == 7) {
+        tbguideh = 6166; 
+    } else if (tb == 8) {
+        tbguideh = 2101;
+    } else if (tb == 9) {
+        tbguideh = 3370;
+    } else if (tb == 10) {
+        tbguideh = 1579;
+    } else if (tb == 1 && type == 2) {
+        tbguideh = 2573;
+    }  else if (tb == 1 && type == 1 && kt == 2) {
+        tbguideh = 3700;
+    }  else {
+        tbguideh = 4118;
+    }
+    
 
-    var guideh1 = tbnasko * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+    var guideh1 = tbguideh * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
     //var guideh2 = tbnasko;
     //var guideh2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
 
-    
+    var guideh3 = "Кв Гайде";
+    if (tb != 1 || kt < 1.7 || kt == 1.8) {
+        guideh3 = "запрет";
+    } else if (type == 1 && km > 1.2 && drive > 4 && birth > 30) {
+        guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+    } else if (type == 2 && km > 1.2) {
+        guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+    } else if (type == 1 && km > 1.2 && +document.getElementById('ko').checked) {
+        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+    } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23) {
+        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+    } else if (type == 2 && km < 1.4) {
+        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+    } else {
+        guideh3 = "0%<br>См сегментацию";
+    }  
     
 /**
  * Результаты формулы
