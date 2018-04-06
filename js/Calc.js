@@ -55,6 +55,15 @@ function Calc() {
             kpr = 1.16;
     }
     
+    
+/**
+ * Коэф km в зависимости от Категории ТС. лошадиные силы, мощность 
+ */
+
+    if (tb == 0.5 || tb == 3 || tb == 4 || tb == 5 || tb == 6 || tb == 7 || tb == 8 || tb == 9 || tb == 10) { 
+            km = 1;
+    }
+    
 
 /**
  * Формула расчета страховой премии НАСКО
@@ -222,7 +231,7 @@ function Calc() {
     //var guideh2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
 
     var guideh3 = "Кв Гайде";
-    if (tb != 1 || kt < 1.7 || kt == 1.8) {
+    if (tb != 1 || kt < 1.7 || kt == 1.8 || kp < 0.4) {
         guideh3 = "запрет";
     } else if (type == 1 && km > 1.2 && drive > 4 && birth > 30) {
         guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
@@ -230,13 +239,68 @@ function Calc() {
         guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
     } else if (type == 1 && km > 1.2 && +document.getElementById('ko').checked) {
         guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
-    } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23) {
+    } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23 && ko == 1) {
         guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
     } else if (type == 2 && km < 1.4) {
         guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
     } else {
         guideh3 = "0%<br>См сегментацию";
-    }  
+    } 
+    
+    
+/**
+ * Формула расчета страховой премии Ингосстрах
+ */
+    
+    
+    var tbingos = 'Базовая ставка Ингосстрах'
+    if (tb == 0.5) {
+        tbingos = 867;
+    } else if (tb == 2) {
+        tbingos = 6166;
+    } else if (tb == 3) {
+        tbingos = 3509;
+    } else if (tb == 4) {
+        tbingos = 5284;
+    } else if (tb == 5) {
+        tbingos = 2808;
+    } else if (tb == 6) {
+        tbingos = 3509;
+    } else if (tb == 7) {
+        tbingos = 6166; 
+    } else if (tb == 8) {
+        tbingos = 2101;
+    } else if (tb == 9) {
+        tbingos = 3370;
+    } else if (tb == 10) {
+        tbingos = 1124;
+    } else if (tb == 1 && type == 2) {
+        tbingos = 2573;
+    }  else if (tb == 1 && type == 1) {
+        tbingos = 4118;
+    }
+    
+
+    var ingos1 = tbingos * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+    //var guideh2 = tbnasko;
+    //var guideh2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
+
+    var ingos3 = "Кв Ингосстрах";
+    if (tb > 1 || kt == 1.8 || kt < 1.7 || kp < 0.4) {
+        ingos3 = "запрет";
+    } else if (type == 1 && kbm < 1 ) {
+        ingos3 = "ЕОСАГО = 20%, МММ = 15%<br>Кроме: Все отечественные ТС";
+    } else if (type == 2 && kt == 2) {
+        ingos3 = "МММ = 15%<br>Кроме: Газ";
+    } else if (type == 2 && kt == 1.7 && tb == 0.5) {
+        ingos3 = "запрет";
+    } else if (type == 2 && kt == 1.7 && tb == 1) {
+        ingos3 = "МММ = 15%<br>Кроме: Все отечественные ТС";
+    } else {
+        ingos3 = "запрет";
+    } 
+    
+    
     
 /**
  * Результаты формулы
@@ -260,9 +324,13 @@ function Calc() {
     document.getElementById('result-maks-2').innerHTML = tbmaks;
     document.getElementById('result-maks-3').innerHTML = maks3;
 
-     document.getElementById('result-guideh-1').innerHTML = + guideh1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-guideh-1').innerHTML = + guideh1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-guideh-2').innerHTML = tbguideh;
     document.getElementById('result-guideh-3').innerHTML = guideh3;
+    
+    document.getElementById('result-ingos-1').innerHTML = + ingos1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-ingos-2').innerHTML = tbingos;
+    document.getElementById('result-ingos-3').innerHTML = ingos3;
     
     document.getElementById('result3').innerHTML = "4118" + " * " + kt + " * " + kbm + " * " + kvs + " * " + km + " * " + kp;
     document.getElementById('result-3').innerHTML = + c.toFixed(2);
