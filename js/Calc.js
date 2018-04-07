@@ -3,7 +3,7 @@ function Calc() {
 /**
  * Обозначаем переменные и находим значение по ID
  */
-    var type = +document.getElementById('type').value; // Физик или юрик
+    var type = 1; // Физик или юрик
     var tb = +document.getElementById('tb').value; // Базовая ставка 3432-4118 . зависит от территории, категории авто и страховой компании
     var kt = +document.getElementById('kt').value; // коэф территории
     var kbm = +document.getElementById('kbm').value; // коэф бонус-малус
@@ -18,7 +18,7 @@ function Calc() {
     var kn = 1; // коэф грубых нарушений
 
 /**
- * Находим kvs
+ * Коэф kvs от Возр-стаж
  */
     
     if (birth == 22 && drive < 4) { 
@@ -30,6 +30,18 @@ function Calc() {
     } else {
         kvs = 1;    
     }
+
+     
+/**
+ * Юр или Физ лицо, обозначаем type
+ */
+    
+    if (+document.getElementById('ytype').checked) {
+        type = 2;
+    } else if (+document.getElementById('ftype').checked){
+        type = 1;
+    }
+    
     
 /**
  * Если ЮЛ или без ограничений. Chekbox
@@ -97,25 +109,7 @@ function Calc() {
         tbnasko = 3432;
     }
     
-    //var nasko1 = 'Формула Наско'
-    //if (type == 1) {
-    //    nasko1 = tbnasko * kt * kbm * kvs * ko * ks * kp * km * kn; //Физик, ko нет, берем kvs по if выше
-    //} else if (type == 1 && tb == 0.5 || tb > 4) {
-    //    nasko1 = tbnasko * kt * kbm * kvs * ko * ks * kp * km * kn; //Физик, ko нет, берем kvs по if выше
-    //} else {
-    //    nasko1 = tbnasko * kt * kbm * kvs * ko * ks * kp * km * kpr * kn; //Юрик, kvs нет, берем ko = 1.8
-    //}
-    
-    //var nasko2 = 'Результат'
-    //if (type == 1) {
-    //    nasko2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + "1" + " * " + kn; //Физик
-    //} else {
-    //    nasko2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn; //Юрик
-    //}
-    
     var nasko1 = tbnasko * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
-    //var nasko2 = tbnasko;
-    //var nasko2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
     
     var nasko3 = "Кв Наско";
     if ( kp < 1 || 1 > tb || tb == 2 || tb > 4) {
@@ -131,19 +125,6 @@ function Calc() {
 /**
  * Формула расчета страховой премии МАКС
  */
-    //var maks1 = 'Формула Макс'
-    //if (type == 1) {
-    //    maks1 = 3700 * kt * kbm * kvs * ko * ks * kp * km * kn; //Физик, ko нет, берем kvs по if выше
-    //} else {
-    //    maks1 = 2573 * kt * kbm * kvs * ko * ks * kp * km * kpr * kn; //Юрик, kvs нет, берем ko = 1.8
-    //}
-    //
-    //var maks2 = 'Результат'
-    //if (type == 1) {
-    //    maks2 = "3700" + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + "1" + " * " + kn; //Физик
-    //} else {
-    //    maks2 = "2573" + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn; //Юрик
-    //}
     
     var tbmaks = 'Базовая ставка Макс'
     if (tb == 0.5) {
@@ -185,9 +166,9 @@ function Calc() {
     } else if (kt < 2 && km < 1.2 ) {
         maks3 = "запрет";
     } else if (kt == 2 && km < 1.2) {
-        maks3 = "15%";
+        maks3 = "15%, Кроме:<br>Чужая прол - кв = 0%";
     } else {
-        maks3 = "25%";
+        maks3 = "25%, Кроме:<br>Чужая прол - кв = 0%";
     }
     
 /**
@@ -409,6 +390,65 @@ function Calc() {
  
     
 /**
+ * Формула расчета страховой премии Росгосстрах
+ */
+    
+    
+    var tbrgs = 'Базовая ставка Росгосстрах' // Питер и ЛО то же самое
+    if (tb == 0.5) {
+        tbrgs = 867;
+    } else if (tb == 2) {
+        tbrgs = 6166;
+    } else if (tb == 3) {
+        tbrgs = 3509;
+    } else if (tb == 4) {
+        tbrgs = 5284;
+    } else if (tb == 5) {
+        tbrgs = 2808;
+    } else if (tb == 6) {
+        tbrgs = 3509;
+    } else if (tb == 7) {
+        tbrgs = 6166; 
+    } else if (tb == 8) {
+        tbrgs = 2101;
+    } else if (tb == 9) {
+        tbrgs = 3370;
+    } else if (tb == 10) {
+        tbrgs = 1124;
+    } else if (tb == 1 && type == 2) {
+        tbrgs = 2573;
+    }  else if (tb == 1 && type == 1) {
+        tbrgs = 4118;
+    }
+    
+    
+
+    var rgs1 = tbrgs * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+
+
+    var rgs3 = "Кв Росгосстрах";
+    if (kt == 1.8 || kt < 1.7 || kp < 0.4) {
+        rgs3 = "запрет";
+    } else if (type == 1 && tb != 1) {
+        rgs3 = "запрет";
+    } else if (type == 1 && tb == 1 && ko != 1.8) {
+        rgs3 = "10%";
+    } else if (type == 1 && tb == 1 && ko == 1.8 && km < 1.4) {
+        rgs3 = "запрет";
+    } else if (type == 1 && tb == 1 && ko == 1.8 && km > 1.2) {
+        rgs3 = "10%";
+    } else if (type == 2 && tb == 2) {
+        rgs3 = "запрет";
+    } else if (type == 2 && tb < 5) {
+        rgs3 = "10%";
+    } else if (type == 2 && tb > 7) {
+        rgs3 = "10%";
+    } else {
+        rgs3 = "запрет";
+    }
+ 
+    
+/**
  * Результаты формулы
  */
     
@@ -445,6 +485,10 @@ function Calc() {
     document.getElementById('result-ergo-1').innerHTML = + ergo1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-ergo-2').innerHTML = tbergo;
     document.getElementById('result-ergo-3').innerHTML = ergo3;
+    
+    document.getElementById('result-rgs-1').innerHTML = + rgs1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-rgs-2').innerHTML = tbrgs;
+    document.getElementById('result-rgs-3').innerHTML = rgs3;
     
     document.getElementById('result3').innerHTML = "4118" + " * " + kt + " * " + kbm + " * " + kvs + " * " + km + " * " + kp;
     document.getElementById('result-3').innerHTML = + c.toFixed(2);

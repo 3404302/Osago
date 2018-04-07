@@ -8,17 +8,24 @@
 	</head>
 	<body>
         <script src="js/Calc.js"></script>
+        <script src="js/Chk.js"></script>
         <div>Калькулятор осаго ТЕСТ</div>
 		<form label="Выбери">
+<!--
             <p>
-                <select name="form-type" id="type">
+               <select name="form-type" id="type">
                     <option disabled>ФЛ\ЮЛ</option>
                     <option value="1"selected>Физ лицо</option>
                     <option value="2">Юр лицо</option>
                 </select>
             </p>
+-->
+            <div>
+                <p><input name="form-type" id="ftype" type="radio" value="1" onclick="Chk();"> Физ лицо</p>
+                <p><input name="form-type" id="ytype" type="radio" value="2" onclick="Chk();"> Юр лицо</p>
+            </div>
             <p>
-                <select name="form-tb" id="tb">
+                <select name="form-tb" id="tb" onchange="Chk();">
                     <option disabled >Категория ТС</option>
                     <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
                     <option value="1" selected>КатB (Легковые автомобили)</option>
@@ -104,7 +111,7 @@
             </select>                
             </p>
             <div>
-                <input type="checkbox" id="ko" name="form-ko" value='1.8'>
+                <input type="checkbox" id="ko" name="form-ko" value='1.8' onclick="Chk();">
                 <label for="form-ko">Без ограничений?</label>
             </div>
             <!-- Заготовка под ks 
@@ -231,11 +238,11 @@
             </tr>
             <tr>
                 <td>Росгосстрах</td>
-                <td id="result"></td>
-                <td id="result-1"></td>
-                <td id="result-1-1"></td>
-                <td id="result-1-1"></td>
-                <td id="result-1-1"></td>
+                <td id="result-rgs-1"></td>
+                <td id="result-rgs-2"></td>
+                <td id="result-rgs-3"></td>
+                <td><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%A0%D0%BE%D1%81%D0%B3%D0%BE%D1%81%D1%81%D1%82%D1%80%D0%B0%D1%85-%D0%BE%D1%81%D0%B0%D0%B3%D0%BE">Перейти</a></td>
+                <td><a target="_blank" href="https://www.rgs.ru/products/private_person/auto/osago/index.wbp">Перейти</a><br>Раздел Скачать слева</td>
                 <td>Москва, МО</td>
             </tr>
             <tr>
@@ -294,7 +301,7 @@
             </tr>
         </table>
 <div>
-    <p>Поправить расчет кв Вск;</p>
+    <p>Поправить расчет кв Вск; <b>готово</b></p>
     <p>Поправить расчет кат А; <b>готово</b></p>
     <p>Поправить расчет Автобусов, Трам, самох, тролл <b>готово</b></p>
     <p>Уточнить Тб по регионам в Гайде</p>
