@@ -1,5 +1,9 @@
 function Chk() {
     
+/**
+* Убираем лишние поля при ko == 1.8 и km по ненужным категориям
+*/
+    
     var tb = +document.getElementById('tb').value;
     
     if (+document.getElementById('ytype').checked) {
