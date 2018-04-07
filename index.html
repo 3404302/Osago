@@ -1,55 +1,59 @@
 <html lang="ru">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Калькулятор Осаго</title>
         <link href="css/main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 	</head>
 	<body>
         <header class="main-header">
+            <div class="container">
+                <h1>Калькулятор осаго ТЕСТ</h1>
+            </div>
         </header>
-        <main class="container">
-            <div class="main-left clearfix">
-                <form label="Выбери">
-                    <h1>Калькулятор осаго ТЕСТ</h1>
-                    <div>
-                        <h3>Собственник:</h3>
-                        <p><input name="form-type" id="ftype" type="radio" value="1" onclick="Chk();"> Физ лицо</p>
-                        <p><input name="form-type" id="ytype" type="radio" value="2" onclick="Chk();"> Юр лицо</p>
-                    </div>
-                    <div>
-                        <h3>Категория ТС:</h3>
-                        <select name="form-tb" id="tb" onchange="Chk();">
-                            <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
-                            <option value="1" selected>КатB (Легковые автомобили)</option>
-                            <option value="2">КатВ (Легковые авто, используемые в качестве такси)</option>
-                            <option value="3">КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
-                            <option value="4">КатC (Грузовые авто, с макс массой более 16 тонн)</option> 
-                            <option value="5">КатD (Автобусы с числом пасс мест 16 и менее)</option>
-                            <option value="6">КатD (Автобусы с числом пасс мест более 16)</option>
-                            <option value="7">КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
-                            <option value="8">Трамваи</option>
-                            <option value="9">Троллейбусы</option>
-                            <option value="10">Тракторы, самох дорож-строит машины, иные машины</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="kpr" name="form-kpr" value='1'>
-                        <label for="form-ko">С прицепом</label>
-                    </div>
-                    <div>
-                        <h3>Регион:</h3>
-                        <select name="form-kt" id="kt">
-                            <option value="2">Москва</option>
-                            <option value="1.7">МО</option>
-                            <option value="1.8">С. Петербург</option>
-                            <option value="1.6">ЛО</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h3>Кбм:</h3>
-                        <select name="form-kbm" id="kbm">
+        <main class="main">
+            <div class="column-container container clearfix">
+                <div class="main-left">
+                    <form label="Выбери">
+                        <div>
+                            <h3>Собственник:</h3>
+                            <p><input name="form-type" id="ftype" type="radio" value="1" onclick="Chk();"> Физ лицо</p>
+                            <p><input name="form-type" id="ytype" type="radio" value="2" onclick="Chk();"> Юр лицо</p>
+                        </div>
+                        <div>
+                            <h3>Категория ТС:</h3>
+                            <select name="form-tb" id="tb" onchange="Chk();">
+                                <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
+                                <option value="1" selected>КатB (Легковые автомобили)</option>
+                                <option value="2">КатВ (Легковые авто, используемые в качестве такси)</option>
+                                <option value="3">КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
+                                <option value="4">КатC (Грузовые авто, с макс массой более 16 тонн)</option> 
+                                <option value="5">КатD (Автобусы с числом пасс мест 16 и менее)</option>
+                                <option value="6">КатD (Автобусы с числом пасс мест более 16)</option>
+                                <option value="7">КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
+                                <option value="8">Трамваи</option>
+                                <option value="9">Троллейбусы</option>
+                                <option value="10">Тракторы, самох дорож-строит машины, иные машины</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="kpr" name="form-kpr" value='1'>
+                            <label for="form-ko">С прицепом</label>
+                        </div>
+                        <div>
+                            <h3>Регион:</h3>
+                            <select name="form-kt" id="kt">
+                                <option value="2" selected>Москва</option>
+                                <option value="1.7">МО</option>
+                                <option value="1.8">С. Петербург</option>
+                                <option value="1.6">ЛО</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h3>Кбм:</h3>
+                            <select name="form-kbm" id="kbm">
                             <option value='2.45'>М (2.45)</option>
                             <option value='2.3'>0 (2.3)</option>
                             <option value='1.55'>1 (1.55)</option>
@@ -65,39 +69,41 @@
                             <option value='0.6'>11 (0.6)</option>
                             <option value='0.55'>12 (0.55)</option>
                             <option value='0.5'>13 (0.5)</option>
-                        </select>
-                        <p><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%9E%D1%81%D0%B0%D0%B3%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Проверить Кбм</a></p>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="ko" name="form-ko" value='1.8' onclick="Chk();">
-                        <label for="form-ko">Без ограничений?</label>
-                    </div>
-                    <div>
-                        <h3>Стаж:</h3>
-                        <select name="form-drive" id="drive">                            
-                            <option value='6'>Свыше 10 лет</option>
-                            <option value='5'>Свыше 5 лет</option>
-                            <option value='4'>От 3 до 5 лет вкл</option>
-                            <option value='3'>До 3 лет вкл</option>
-                            <option value='2'>До 2 лет вкл</option>
-                        </select>   
-                    </div>
-                    <div>
-                        <h3>Стаж:</h3>
-                        <select name="form-birth" id="birth">
-                            <option value='22'>До 22 включительно</option>
-                            <option value='23'>23</option>
-                            <option value='24'>24</option>
-                            <option value='25'>25</option>
-                            <option value='26'>26</option>
-                            <option value='27'>27</option>
-                            <option value='28'>28</option>
-                            <option value='29'>29</option>
-                            <option value='30'>30</option>
-                            <option value='31'>31</option>
-                            <option value='32'>32 и старше</option>
-                        </select>
-                    </div>
+                            </select>
+                            <p><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%9E%D1%81%D0%B0%D0%B3%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Проверить Кбм</a></p>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ko" name="form-ko" value='1.8' onclick="Chk();">
+                            <label for="form-ko">Без ограничений?</label>
+                        </div>
+                        <div>
+                            <h3>Стаж:</h3>
+                            <select name="form-drive" id="drive">
+                                <option selected></option>
+                                <option value='6'>Свыше 10 лет</option>
+                                <option value='5'>Свыше 5 лет</option>
+                                <option value='4'>От 3 до 5 лет вкл</option>
+                                <option value='3'>До 3 лет вкл</option>
+                                <option value='2'>До 2 лет вкл</option>
+                            </select>   
+                        </div>
+                        <div>
+                            <h3>Возраст:</h3>
+                            <select name="form-birth" id="birth">
+                                <option selected></option>
+                                <option value='22'>До 22 включительно</option>
+                                <option value='23'>23</option>
+                                <option value='24'>24</option>
+                                <option value='25'>25</option>
+                                <option value='26'>26</option>
+                                <option value='27'>27</option>
+                                <option value='28'>28</option>
+                                <option value='29'>29</option>
+                                <option value='30'>30</option>
+                                <option value='31'>31</option>
+                                <option value='32'>32 и старше</option>
+                            </select>
+                        </div>
                     <div>
                         <h3>Период:</h3>
                         <select name="form-kp" id="kp">  
@@ -116,7 +122,8 @@
                     </div>
                     <div>
                         <h3>Мощность:</h3>
-                        <select name="form-km" id="km">  
+                        <select name="form-km" id="km">
+                            <option selected></option>
                             <option value='1.6'>Свыше 150 лс</option>
                             <option value='1.4'>120-150 лс вкл</option>
                             <option value='1.2'>100-120 лс вкл</option>
@@ -125,10 +132,10 @@
                             <option value='0.6'>До 50 лс вкл</option>
                         </select>
                     </div>
-                    <input type="button" value="Рассчитать" onclick="Calc();">
+                    <input class="btn submit" type="button" value="Рассчитать" onclick="Calc();">
                 </form>
             </div>
-            <div class="main-right clearfix">
+            <div class="main-right">
                 <h2>Коэффициенты:</h2>
                 <table border="1">
                     <tr>
@@ -183,7 +190,8 @@
                     </tr>
                 </table>
             </div>
-            <div class="main-results clearfix">
+                </div>
+            <div class="main-results container">
                 <div class="main-results-table">
                     <h2>Результат расчетов:</h2>
                     <table class="table-results " border="1">
@@ -289,7 +297,9 @@
                     </table>
                 </div>
             </div>
-            <div class="main-bottom">
+        </main>
+        <footer class="footer">
+            <div class="container">
                 <div class="main-list">
                     <ul>
                         <li>Уточнить Тб по регионам в Гайде</li>
@@ -303,8 +313,6 @@
                     </ul>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
         </footer>
         <script src="js/Calc.js"></script>
         <script src="js/Chk.js"></script>

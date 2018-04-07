@@ -1,3 +1,12 @@
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: normal;
+
+}
+
 TABLE {
     border-collapse: collapse;
 }
@@ -12,6 +21,24 @@ TABLE {
 
 .clearfix::after {
     content: "";
-    display: block;
+    display: table;
     clear: both;
+}
+
+.main-left {
+    background-color:aliceblue;
+}
+
+.main-right {
+    background-color:aquamarine;
+}
+
+.main-results {
+    background-color:cornsilk;
+}
+
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
 }
