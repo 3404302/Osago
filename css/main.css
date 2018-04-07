@@ -1,2 +1,17 @@
 TABLE {
     border-collapse: collapse;
+}
+
+.main-left {
+    float: left;
+}
+
+.main-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
