@@ -21,9 +21,9 @@ function Calc() {
  * Находим kvs
  */
     
-    if (birth == 22 && drive == 3) { 
+    if (birth == 22 && drive < 4) { 
         kvs = 1.8;
-    } else if (birth > 22 && drive == 3) {
+    } else if (birth > 22 && drive < 4) {
         kvs = 1.7;
     } else if (birth == 22 && drive > 3) {
         kvs = 1.6;
@@ -177,8 +177,7 @@ function Calc() {
     }
     
     var maks1 = tbmaks * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
-    //var maks2 = tbmaks;
-    //var maks2 = tbmaks + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
+
     
     var maks3 = "Кв Макс";
     if (kp < 1 || tb != 1 || type != 1 || ko == 1.8 || kt < 1.7 || kt == 1.8) {
@@ -227,8 +226,7 @@ function Calc() {
     
 
     var guideh1 = tbguideh * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
-    //var guideh2 = tbnasko;
-    //var guideh2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
+
 
     var guideh3 = "Кв Гайде";
     if (tb != 1 || kt < 1.7 || kt == 1.8 || kp < 0.4) {
@@ -282,8 +280,7 @@ function Calc() {
     
 
     var ingos1 = tbingos * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
-    //var guideh2 = tbnasko;
-    //var guideh2 = tbnasko + " * " + kt + " * " + kbm + " * " + kvs + " * " + ko + " * " + ks + " * " + kp + " * " + km + " * " + kpr + " * " + kn;
+
 
     var ingos3 = "Кв Ингосстрах";
     if (tb > 1 || kt == 1.8 || kt < 1.7 || kp < 0.4) {
@@ -301,6 +298,115 @@ function Calc() {
     } 
     
     
+/**
+ * Формула расчета страховой премии Вск
+ */
+    
+    
+    var tbvsk = 'Базовая ставка Вск'
+    if (tb == 0.5) {
+        tbvsk = 1579;
+    } else if (tb == 2) {
+        tbvsk = 6166;
+    } else if (tb == 3) {
+        tbvsk = 3509;
+    } else if (tb == 4) {
+        tbvsk = 5284;
+    } else if (tb == 5) {
+        tbvsk = 2808;
+    } else if (tb == 6) {
+        tbvsk = 3509;
+    } else if (tb == 7) {
+        tbvsk = 6166; 
+    } else if (tb == 8) {
+        tbvsk = 2101;
+    } else if (tb == 9) {
+        tbvsk = 3370;
+    } else if (tb == 10) {
+        tbvsk = 1124;
+    } else if (tb == 1 && type == 2) {
+        tbvsk = 2573;
+    }  else if (tb == 1 && type == 1) {
+        tbvsk = 4118;
+    }
+    
+
+    var vsk1 = tbvsk * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+
+
+    var vsk3 = "Кв Вск";
+    if (1 > tb > 4 || kt == 1.8 || kt < 1.7 || kp < 1 || kbm > 0.95 || tb == 2) {
+        vsk3 = "запрет, при пролонгации<br>см сегментацию";
+    } else if (type == 2 && tb == 1) {
+        vsk3 = "10%";
+    } else if (type == 2 && tb == 3) {
+        vsk3 = "5%";
+    } else if (type == 2 && tb == 4) {
+        vsk3 = "5%";
+    } else if (type == 1 && birth > 30 && km > 1.2 && kvs == 1 && kt == 2) {
+        vsk3 = "27, при пролонгации более 100 лс<br>см сегментацию";
+    } else if (type == 1 && birth > 22 && km > 1.2 && kvs == 1 && kt == 2) {
+        vsk3 = "25, при пролонгации более 100 лс<br>см сегментацию";
+    } else if (type == 1 && birth > 22 && km > 1.2 && kvs == 1 && kt == 1.7) {
+        vsk3 = "20, при пролонгации более 100 лс<br>см сегментацию";
+    } else if (type == 1 && km > 1.2 && kvs != 1) {
+        vsk3 = "10, при пролонгации более 100 лс<br>см сегментацию";
+    } else if (type == 1 && km < 1.4 && kvs == 1 && birth > 30) {
+        vsk3 = "10, при пролонгации менее 100 лс<br>см сегментацию";
+    } else {
+        vsk3 = "запрет, при пролонгации<br>см сегментацию";
+    }
+    
+/**
+ * Формула расчета страховой премии Эрго
+ */
+    
+    
+    var tbergo = 'Базовая ставка Эрго' // Питер и ЛО то же самое
+    if (tb == 0.5) {
+        tbergo = 1579;
+    } else if (tb == 2) {
+        tbergo = 6166;
+    } else if (tb == 3) {
+        tbergo = 4211;
+    } else if (tb == 4) {
+        tbergo = 6341;
+    } else if (tb == 5) {
+        tbergo = 3370;
+    } else if (tb == 6) {
+        tbergo = 4211;
+    } else if (tb == 7) {
+        tbergo = 6166; 
+    } else if (tb == 8) {
+        tbergo = 2101;
+    } else if (tb == 9) {
+        tbergo = 3370;
+    } else if (tb == 10) {
+        tbergo = 1579;
+    } else if (tb == 1 && type == 2) {
+        tbergo = 2573;
+    }  else if (tb == 1 && type == 1) {
+        tbergo = 4118;
+    }
+    
+    
+
+    var ergo1 = tbergo * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+
+
+    var ergo3 = "Кв Эрго";
+    if ( tb != 1 || kp < 0.4 || kbm < 0.65 || kbm > 0.9 || km < 1.4) {
+        ergo3 = "запрет, при пролонгации<br>см сегментацию";
+    } else if (km > 1.2 && birth == 32 && ko != 1.8 && drive == 2) {
+        ergo3 = "10%";
+    } else if (km > 1.2 && birth == 32 && ko != 1.8 && drive == 6) {
+        ergo3 = "10%";
+    } else if (km > 1.2 && ko == 1.8) {
+        ergo3 = "10%";
+    }  else {
+        ergo3 = "запрет, при пролонгации<br>см сегментацию";
+    }
+ 
     
 /**
  * Результаты формулы
@@ -331,6 +437,14 @@ function Calc() {
     document.getElementById('result-ingos-1').innerHTML = + ingos1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-ingos-2').innerHTML = tbingos;
     document.getElementById('result-ingos-3').innerHTML = ingos3;
+    
+    document.getElementById('result-vsk-1').innerHTML = + vsk1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-vsk-2').innerHTML = tbvsk;
+    document.getElementById('result-vsk-3').innerHTML = vsk3;
+    
+    document.getElementById('result-ergo-1').innerHTML = + ergo1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-ergo-2').innerHTML = tbergo;
+    document.getElementById('result-ergo-3').innerHTML = ergo3;
     
     document.getElementById('result3').innerHTML = "4118" + " * " + kt + " * " + kbm + " * " + kvs + " * " + km + " * " + kp;
     document.getElementById('result-3').innerHTML = + c.toFixed(2);
