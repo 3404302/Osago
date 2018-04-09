@@ -26,19 +26,48 @@ TABLE {
 }
 
 .main-left {
-    background-color:aliceblue;
+   background-color: aliceblue; 
 }
 
 .main-right {
-    background-color:aquamarine;
+    
 }
 
 .main-results {
-    background-color:cornsilk;
+    
 }
 
 .container {
-    width: 940px;
+    width: 1060px;
     padding: 0 10px;
     margin: 0 auto;
+}
+
+.option p {
+    float:left;
+}
+
+form div {
+    margin: 3px 0 0 3px;
+}
+
+.option div {
+    float: left;
+}
+
+.table-results td {
+    padding-left: 5px;
+}
+
+.table-results td {
+    height: 50px;
+}
+
+.table-results-2 td {
+    padding-left: 5px;
+}
+
+.btn {
+    margin: 10px;
+    float: right;
 }

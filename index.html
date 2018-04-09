@@ -17,176 +17,199 @@
             <div class="column-container container clearfix">
                 <div class="main-left">
                     <form label="Выбери">
-                        <div>
-                            <h3>Собственник:</h3>
+                        <div class ="option clearfix">
+                            <p>Собственник:</p>
                             <p><input name="form-type" id="ftype" type="radio" value="1" onclick="Chk();"> Физ лицо</p>
                             <p><input name="form-type" id="ytype" type="radio" value="2" onclick="Chk();"> Юр лицо</p>
                         </div>
-                        <div>
-                            <h3>Категория ТС:</h3>
-                            <select name="form-tb" id="tb" onchange="Chk();">
-                                <option value="0.5">КатA (Мотоциклы, мопеды и легкие квадрациклы)</option>
-                                <option value="1" selected>КатB (Легковые автомобили)</option>
-                                <option value="2">КатВ (Легковые авто, используемые в качестве такси)</option>
-                                <option value="3">КатC (Грузовые авто, с макс массой 16 тонн и менее)</option>
-                                <option value="4">КатC (Грузовые авто, с макс массой более 16 тонн)</option> 
-                                <option value="5">КатD (Автобусы с числом пасс мест 16 и менее)</option>
-                                <option value="6">КатD (Автобусы с числом пасс мест более 16)</option>
-                                <option value="7">КатD (Автобусы, используемые на регул перевозках, с посадкой и высадкой)</option>
-                                <option value="8">Трамваи</option>
-                                <option value="9">Троллейбусы</option>
-                                <option value="10">Тракторы, самох дорож-строит машины, иные машины</option>
-                            </select>
+                        <div class="option clearfix">
+                            <div>Категория ТС:</div>
+                            <div>
+                                <select name="form-tb" id="tb" onchange="Chk();">
+                                    <option value="0.5">КатA (Мото, моп, квадр)</option>
+                                    <option value="1" selected>КатB (Легк. ТС)</option>
+                                    <option value="2">КатВ (Легк. ТС, такси)</option>
+                                    <option value="3">КатC (Груз ТС., макс масса 16 т и менее)</option>
+                                    <option value="4">КатC (Груз ТС., макс масса более 16 т)</option> 
+                                    <option value="5">КатD (Автоб, мест 16 и менее)</option>
+                                    <option value="6">КатD (Автоб, мест более 16)</option>
+                                    <option value="7">КатD (Автобусы, такси)</option>
+                                    <option value="8">Трамваи</option>
+                                    <option value="9">Троллейбусы</option>
+                                    <option value="10">Тракторы, и остальное</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
+                        <div class="option clearfix">
                             <input type="checkbox" id="kpr" name="form-kpr" value='1'>
                             <label for="form-ko">С прицепом</label>
                         </div>
-                        <div>
-                            <h3>Регион:</h3>
-                            <select name="form-kt" id="kt">
-                                <option value="2" selected>Москва</option>
-                                <option value="1.7">МО</option>
-                                <option value="1.8">С. Петербург</option>
-                                <option value="1.6">ЛО</option>
-                            </select>
+                        <div class="option clearfix">
+                            <div>Регион:</div>
+                            <div class="list-3">
+                                <select name="form-kt" id="kt">
+                                    <option value="2" selected>Москва</option>
+                                    <option value="1.7">МО</option>
+                                    <option value="1.8">С. Петербург</option>
+                                    <option value="1.6">ЛО</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
-                            <h3>Кбм:</h3>
-                            <select name="form-kbm" id="kbm">
-                            <option value='2.45'>М (2.45)</option>
-                            <option value='2.3'>0 (2.3)</option>
-                            <option value='1.55'>1 (1.55)</option>
-                            <option value='1.4'>2 (1.4)</option>
-                            <option value='1' selected>3 (1)</option>
-                            <option value='0.95'>4 (0.95)</option>
-                            <option value='0.9'>5 (0.9)</option>
-                            <option value='0.85'>6 (0.85)</option>
-                            <option value='0.8'>7 (0.8)</option>
-                            <option value='0.75'>8 (0.75)</option>
-                            <option value='0.7'>9 (0.7)</option>
-                            <option value='0.65'>10 (0.65)</option>
-                            <option value='0.6'>11 (0.6)</option>
-                            <option value='0.55'>12 (0.55)</option>
-                            <option value='0.5'>13 (0.5)</option>
-                            </select>
-                            <p><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%9E%D1%81%D0%B0%D0%B3%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Проверить Кбм</a></p>
+                        <div class="option clearfix">
+                            <div>Кбм:</div>
+                            <div>
+                                <select name="form-kbm" id="kbm">
+                                    <option value='2.45'>М (2.45)</option>
+                                    <option value='2.3'>0 (2.3)</option>
+                                    <option value='1.55'>1 (1.55)</option>
+                                    <option value='1.4'>2 (1.4)</option>
+                                    <option value='1' selected>3 (1)</option>
+                                    <option value='0.95'>4 (0.95)</option>
+                                    <option value='0.9'>5 (0.9)</option>
+                                    <option value='0.85'>6 (0.85)</option>
+                                    <option value='0.8'>7 (0.8)</option>
+                                    <option value='0.75'>8 (0.75)</option>
+                                    <option value='0.7'>9 (0.7)</option>
+                                    <option value='0.65'>10 (0.65)</option>
+                                    <option value='0.6'>11 (0.6)</option>
+                                    <option value='0.55'>12 (0.55)</option>
+                                    <option value='0.5'>13 (0.5)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <a target="_blank" href="http://tochkains.ru/index.php?title=%D0%9E%D1%81%D0%B0%D0%B3%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Проверить Кбм</a>
+                            </div>
                         </div>
-                        <div>
-                            <input type="checkbox" id="ko" name="form-ko" value='1.8' onclick="Chk();">
-                            <label for="form-ko">Без ограничений?</label>
+                        <div class="option clearfix">
+                            <div>
+                                <input type="checkbox" id="ko" name="form-ko" value='1.8' onclick="Chk();">
+                                <label for="form-ko">Без ограничений</label>
+                            </div>
                         </div>
-                        <div>
-                            <h3>Стаж:</h3>
-                            <select name="form-drive" id="drive">
-                                <option selected></option>
-                                <option value='6'>Свыше 10 лет</option>
-                                <option value='5'>Свыше 5 лет</option>
-                                <option value='4'>От 3 до 5 лет вкл</option>
-                                <option value='3'>До 3 лет вкл</option>
-                                <option value='2'>До 2 лет вкл</option>
-                            </select>   
+                        <div class="option clearfix">
+                            <div>Стаж:</div>
+                            <div>
+                                <select name="form-drive" id="drive">
+                                    <option selected></option>
+                                    <option value='6'>Свыше 10 лет</option>
+                                    <option value='5'>Свыше 5 лет</option>
+                                    <option value='4'>От 3 до 5 лет вкл</option>
+                                    <option value='3'>До 3 лет вкл</option>
+                                    <option value='2'>До 2 лет вкл</option>
+                                </select>
+                            </div> 
+                            <div>Возраст:</div>
+                            <div>
+                                <select name="form-birth" id="birth">
+                                    <option selected></option>
+                                    <option value='22'>До 22 вкл</option>
+                                    <option value='23'>23</option>
+                                    <option value='24'>24</option>
+                                    <option value='25'>25</option>
+                                    <option value='26'>26</option>
+                                    <option value='27'>27</option>
+                                    <option value='28'>28</option>
+                                    <option value='29'>29</option>
+                                    <option value='30'>30</option>
+                                    <option value='31'>31</option>
+                                    <option value='32'>32 и старше</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
-                            <h3>Возраст:</h3>
-                            <select name="form-birth" id="birth">
-                                <option selected></option>
-                                <option value='22'>До 22 включительно</option>
-                                <option value='23'>23</option>
-                                <option value='24'>24</option>
-                                <option value='25'>25</option>
-                                <option value='26'>26</option>
-                                <option value='27'>27</option>
-                                <option value='28'>28</option>
-                                <option value='29'>29</option>
-                                <option value='30'>30</option>
-                                <option value='31'>31</option>
-                                <option value='32'>32 и старше</option>
-                            </select>
+                        <div class="option clearfix">
+                            <div>Период:</div>
+                            <div>
+                                <select name="form-kp" id="kp">  
+                                    <option value='1' selected>10 - 21 мес</option>
+                                    <option value='0.95'>9 мес</option>
+                                    <option value='0.9'>8 мес</option>
+                                    <option value='0.8'>7 мес</option>
+                                    <option value='0.7'>6 мес</option>
+                                    <option value='0.65'>5 мес</option>
+                                    <option value='0.6'>4 мес</option>
+                                    <option value='0.5'>3 мес</option>
+                                    <option value='0.4'>2 мес</option>
+                                    <option value='0.3'>от 16 дн до 1 мес</option>
+                                    <option value='0.2'>от 5 до 15 дней</option>
+                                </select>
+                            </div>
                         </div>
-                    <div>
-                        <h3>Период:</h3>
-                        <select name="form-kp" id="kp">  
-                            <option value='1' selected>10 - 21 мес</option>
-                            <option value='0.95'>9 мес</option>
-                            <option value='0.9'>8 мес</option>
-                            <option value='0.8'>7 мес</option>
-                            <option value='0.7'>6 мес</option>
-                            <option value='0.65'>5 мес</option>
-                            <option value='0.6'>4 мес</option>
-                            <option value='0.5'>3 мес</option>
-                            <option value='0.4'>2 мес</option>
-                            <option value='0.3'>от 16 дн до 1 мес</option>
-                            <option value='0.2'>от 5 до 15 дней</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h3>Мощность:</h3>
-                        <select name="form-km" id="km">
-                            <option selected></option>
-                            <option value='1.6'>Свыше 150 лс</option>
-                            <option value='1.4'>120-150 лс вкл</option>
-                            <option value='1.2'>100-120 лс вкл</option>
-                            <option value='1.1'>70-100 лс вкл</option>
-                            <option value='1'>50-70 лс вкл</option>
-                            <option value='0.6'>До 50 лс вкл</option>
-                        </select>
-                    </div>
-                    <input class="btn submit" type="button" value="Рассчитать" onclick="Calc();">
-                </form>
-            </div>
-            <div class="main-right">
-                <h2>Коэффициенты:</h2>
-                <table border="1">
-                    <tr>
-                        <td>Тб</td>
-                        <td>См в расчетах</td>
-                        <td>Базовая ставка</td>
-                    </tr>
+                        <div class="option clearfix">
+                            <div>Мощность:</div>
+                            <div>
+                                <select name="form-km" id="km">
+                                    <option selected></option>
+                                    <option value='1.6'>Свыше 150 лс</option>
+                                    <option value='1.4'>120-150 лс вкл</option>
+                                    <option value='1.2'>100-120 лс вкл</option>
+                                    <option value='1.1'>70-100 лс вкл</option>
+                                    <option value='1'>50-70 лс вкл</option>
+                                    <option value='0.6'>До 50 лс вкл</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="option clearfix">
+                            <input class="btn submit" type="button" value="Рассчитать" onclick="Calc();">
+                        </div>
+                    </form>
+                </div>
+                <div class="main-right">
+                    <h2>Коэффициенты:</h2>
+                    <table class="table-results-2"border="1">
+                        <tr>
+                            <th style="width: 20%;">Наименование</th>
+                            <th style="width: 20%;">Результат</th>
+                            <th style="width: 60%;">Рашифровка</th>
+                        </tr>
+                        <tr>
+                            <td>Тб</td>
+                            <td>См в расчетах</td>
+                            <td>Базовая ставка</td>
+                        </tr>
                     <tr>
                         <td>Кт</td>
                         <td id="result-kt"></td>
-                        <td>Территориальный коэффициент</td>
+                        <td>Территориальный коэф</td>
                     </tr>
                     <tr>
                         <td>Кбм</td>
                         <td id="result-kbm"></td>
-                        <td>Коэффициент бонус-малус</td>
+                        <td>Коэф бонус-малус</td>
                     </tr>
                     <tr>
                         <td>Квс</td>
                         <td id="result-kvs"></td>
-                        <td>Коэффициент возраст-стаж</td>
+                        <td>Коэф возраст-стаж</td>
                     </tr>
                     <tr>
                         <td>Ко</td>
                         <td id="result-ko"></td>
-                        <td>Ограничивающий коэффициент</td>
+                        <td>Ограничивающий коэф</td>
                     </tr>
                     <tr>
                         <td>Кс</td>
                         <td id="result-ks"></td>
-                        <td>Коэффициент сезонности</td>
+                        <td>Коэф период использ</td>
                     </tr>
                     <tr>
                         <td>Кп</td>
                         <td id="result-kp"></td>
-                        <td>Коэффициент срока страхования (всегда 1 год)</td>
+                        <td>Коэфф срока страхования</td>
                     </tr>
                     <tr>
                         <td>Км</td>
                         <td id="result-km"></td>
-                        <td>Коэффициент мощности двигателя</td>
+                        <td>Коэф мощности двигателя</td>
                     </tr>
                     <tr>
                         <td>Кпр</td>
                         <td id="result-kpr"></td>
-                        <td>Коэффициент наличия прицепа</td>
+                        <td>Коэф наличия прицепа</td>
                     </tr>
                     <tr>
                         <td>Кн</td>
                         <td id="result-kn"></td>
-                        <td>Коэффициент нарушений</td>
+                        <td>Коэф нарушений</td>
                     </tr>
                 </table>
             </div>
@@ -194,15 +217,15 @@
             <div class="main-results container">
                 <div class="main-results-table">
                     <h2>Результат расчетов:</h2>
-                    <table class="table-results " border="1">
+                    <table class="table-results" border="1">
                         <tr>
-                            <th>Страховая компания</th>
-                            <th>Результат</th>
-                            <th>Базовая ставка</th>
-                            <th>Размер кв</th>
-                            <th>Сегментация</th>
-                            <th>Правила и Тарифы</th>
-                            <th>Регионы</th>
+                            <th style="width: 10%;">Страховая компания</th>
+                            <th style="width: 7%;">Результат</th>
+                            <th style="width: 7%;">Базовая ставка</th>
+                            <th style="width: 34%;">Размер кв</th>
+                            <th style="width: 7%;">Сегментация</th>
+                            <th style="width: 10%;">Правила и Тарифы</th>
+                            <th style="width: 25%;">Регионы</th>
                         </tr>
                         <tr>
                             <td>Наско</td>
@@ -256,7 +279,7 @@
                             <td id="result-ergo-3"></td>
                             <td><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%AD%D1%80%D0%B3%D0%BE-%D0%BE%D1%81%D0%B0%D0%B3%D0%BE">Перейти</a></td>
                             <td><a target="_blank" href="https://www.ergo.ru/about/russia/rules/">Перейти</a></td>
-                            <td>Список регионов в сегментации<br>, территория использования: М и МО, СП и ЛО (по согласованию).<br>Возможно оформить только с Каско</td>
+                            <td>См регионы в сегментации, СП и ЛО по соглас. ОФормить регион только с Каско</td>
                         </tr>
                         <tr>
                             <td>Росгосстрах</td>
@@ -264,7 +287,7 @@
                             <td id="result-rgs-2"></td>
                             <td id="result-rgs-3"></td>
                             <td><a target="_blank" href="http://tochkains.ru/index.php?title=%D0%A0%D0%BE%D1%81%D0%B3%D0%BE%D1%81%D1%81%D1%82%D1%80%D0%B0%D1%85-%D0%BE%D1%81%D0%B0%D0%B3%D0%BE">Перейти</a></td>
-                            <td><a target="_blank" href="https://www.rgs.ru/products/private_person/auto/osago/index.wbp">Перейти</a><br>Раздел Скачать слева</td>
+                            <td><a target="_blank" href="https://www.rgs.ru/products/private_person/auto/osago/index.wbp">Перейти</a><br>Раздел "Скачать"</td>
                             <td>Москва, МО</td>
                         </tr>
                         <tr>
@@ -303,7 +326,7 @@
                 <div class="main-list">
                     <ul>
                         <li>Уточнить Тб по регионам в Гайде</li>
-                        <li>Уточнить kp и kbm ЮЛ ВСК</li>
+                        <li>Уточнить kp и kbm ЮЛ ВСК <b>готово</b></li>
                         <li>Поправить Тб по питеру в Наско</li>
                         <li>Базовые ставки Ингос поправить <b>готово</b></li>
                         <li>Поправить расчет Автобусов, Трам, самох, тролл <b>готово</b></li>

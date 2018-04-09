@@ -239,9 +239,9 @@ function Calc() {
     if ( kp < 1 || 1 > tb || tb == 2 || tb > 4) {
         nasko3 = "запрет";
     } else if ( type == 1 && km > 1.1 && tb == 1) {
-        nasko3 = "23%</br>Кроме: Ваз/Lada/Газ/Уаз, </br>Renault Logan, Daewoo Nexia </br>СТАРШЕ 3-х лет от г.в. по ПТС";
+        nasko3 = "23%</br>Кроме: Ваз/Lada/Газ/Уаз и Logan, Nexia Старше 3 лет по ПТС";
     } else if ( type == 2 && 1 < tb < 4 ) {
-        nasko3 = "23%</br>Кроме:Газ";
+        nasko3 = "23%</br>Кроме: Газ";
     } else {
         nasko3 = "запрет";
     }
@@ -279,15 +279,15 @@ function Calc() {
     if (tb != 1 || kt < 1.7 || kt == 1.8 || kp < 0.4) {
         guideh3 = "запрет";
     } else if (type == 1 && km > 1.2 && drive > 4 && birth > 30) {
-        guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+        guideh3 = "23%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
     } else if (type == 2 && km > 1.2) {
-        guideh3 = "23%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+        guideh3 = "23%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
     } else if (type == 1 && km > 1.2 && +document.getElementById('ko').checked) {
-        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
     } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23 && ko == 1) {
-        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
     } else if (type == 2 && km < 1.4) {
-        guideh3 = "18%<br>Кроме: Газ\Daewoo и ТС до 2000 г.в.";
+        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
     } else {
         guideh3 = "0%<br>См сегментацию";
     } 
@@ -326,7 +326,7 @@ function Calc() {
 
 
     var vsk3 = "Кв Вск";
-    if (1 > tb > 4 || kt == 1.8 || kt < 1.7 || kp < 1 || kbm > 0.95 || tb == 2) {
+    if (1 > tb > 4 || kt == 1.8 || kt < 1.7 || tb == 2) {
         vsk3 = "запрет, при пролонгации<br>см сегментацию";
     } else if (type == 2 && tb == 1) {
         vsk3 = "10%";
@@ -335,6 +335,10 @@ function Calc() {
     } else if (type == 2 && tb == 4) {
         vsk3 = "5%";
     } else if (type == 1 && tb != 1) {
+        vsk3 = "запрет";
+    } else if (type == 1 && kp < 1) {
+        vsk3 = "запрет";
+    } else if (type == 1 && kbm > 0.95) {
         vsk3 = "запрет";
     } else if (type == 1 && birth > 30 && km > 1.2 && kvs == 1 && kt == 2) {
         vsk3 = "27, при пролонгации более 100 лс<br>см сегментацию";
