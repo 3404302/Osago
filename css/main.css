@@ -83,3 +83,20 @@ form div {
     padding: 0 10px;
     margin: 0 10px;
 }
+
+.main-list {
+    float: left;
+}
+
+.iframe-rsa {
+    float: left;
+    width: 70%;
+    height: 100%;
+-moz-transform:scale(0.65);
+-moz-transform-origin: 0 0;
+-o-transform: scale(0.65);
+-o-transform-origin: 0 0;
+-webkit-transform: scale(0.65);
+-webkit-transform-origin: 0 0;
+    
+}

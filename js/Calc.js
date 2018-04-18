@@ -200,7 +200,7 @@ function Calc() {
         tbrgs = 2573;
         
     }  else if (tb == 1 && type == 1 && kt == 2) { // Москва, кат В физики
-        tbnasko = 3432;
+        tbnasko = 3690;
         tbmaks = 3700;
         tbguideh = 3700;
         tbingos = 4118;
@@ -209,7 +209,7 @@ function Calc() {
         tbrgs = 4118;
         
     } else if (tb == 1 && type == 1 && kt == 1.7) { // Моск обл, кат В физики
-        tbnasko = 3432;
+        tbnasko = 3690;
         tbmaks = 3950;
         tbguideh = 4118;
         tbingos = 4118;
