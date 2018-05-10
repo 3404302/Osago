@@ -1,4 +1,4 @@
-.__calcs67jhg7 {
+body {
     font-family: 'PT Sans Narrow', sans-serif;
     line-height: 24px;
     font-size: 14px;
@@ -7,83 +7,83 @@
 
 }
 
-.__calcs67jhg7 TABLE {
+TABLE {
     border-collapse: collapse;
 }
 
-.__calcs67jhg7 .main-left {
+.main-left {
     float: left;
     background-color: aliceblue;
 }
 
-.__calcs67jhg7 .main-right {
+.main-right {
     float: left;
 }
 
-.__calcs67jhg7 .clearfix::after {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
-.__calcs67jhg7 .container {
+.container {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
 }
 
-.__calcs67jhg7 .main-left.container {
+.main-left.container {
     width: auto;
     padding: 0 10px;
     margin: 0 10px;
 }
 
-.__calcs67jhg7 .main-right.container {
+.main-right.container {
     width: auto;
     padding: 0 10px;
     margin: auto;
 }
 
-.__calcs67jhg7 .option p {
+.option p {
     float:left;
 }
 
-.__calcs67jhg7 form div {
+form div {
     margin: 3px 0 0 3px;
 }
 
-.__calcs67jhg7 .option div {
+.option div {
     float: left;
 }
 
-.__calcs67jhg7 .table-results td {
+.table-results td {
     padding-left: 5px;
 }
 
-.__calcs67jhg7 .table-results td {
+.table-results td {
     height: 50px;
 }
 
-.__calcs67jhg7 .table-results-2 td {
+.table-results-2 td {
     padding-left: 5px;
 }
 
-.__calcs67jhg7 .btn {
+.btn {
     margin: 10px;
     float: left;
 }
 
-.__calcs67jhg7 .main-results-table {
+.main-results-table {
     float: left;
     width: 90%;
 }
 
-.__calcs67jhg7 .main-results {
+.main-results {
     width: auto;
     padding: 0 10px;
     margin: 0 10px;
 }
 
-.__calcs67jhg7 .main-list {
+.main-list {
     float: left;
 }
