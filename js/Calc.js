@@ -239,9 +239,9 @@ function Calc() {
     if ( kp < 1 || 1 > tb || tb == 2 || tb > 4) {
         nasko3 = "запрет";
     } else if ( type == 1 && km > 1.1 && tb == 1) {
-        nasko3 = "23%</br>Кроме: Ваз/Lada/Газ/Уаз и Logan, Nexia Старше 3 лет по ПТС";
+        nasko3 = "21%</br>Кроме: ГАЗ, и Ваз/Lada/Уаз и Logan, Nexia Старше 3 лет по ПТС";
     } else if ( type == 2 && 1 < tb < 4 ) {
-        nasko3 = "23%</br>Кроме: Газ";
+        nasko3 = "21%</br>Кроме: Газ";
     } else {
         nasko3 = "запрет";
     }
