@@ -279,17 +279,17 @@ function Calc() {
     if (tb != 1 || kt < 1.7 || kt == 1.8 || kp < 0.4) {
         guideh3 = "запрет";
     } else if (type == 1 && km > 1.2 && drive > 4 && birth > 30) {
-        guideh3 = "23%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
+        guideh3 = "25%<br>Кроме: Газ/Daewoo/ВАЗ и ТС до 2000 г.в.";
     } else if (type == 2 && km > 1.2) {
-        guideh3 = "23%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
-    } else if (type == 1 && km > 1.2 && +document.getElementById('ko').checked) {
-        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
-    } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23 && ko == 1) {
-        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
-    } else if (type == 2 && km < 1.4) {
-        guideh3 = "18%<br>Кроме: Газ/Daewoo и ТС до 2000 г.в.";
+        guideh3 = "25%<br>Кроме: Газ/Daewoo/ВАЗ и ТС до 2000 г.в.";
+    } else if (type == 1 && +document.getElementById('ko').checked) {
+        guideh3 = "запрет";
+    } else if (type == 1 && km > 1.1 && drive > 3 && birth > 23) {
+        guideh3 = "20%<br>Кроме: Газ/Daewoo/ВАЗ и ТС до 2000 г.в.";
+    } else if (type == 2 && km < 1.2) {
+        guideh3 = "20%<br>Кроме: Газ/Daewoo/ВАЗ и ТС до 2000 г.в.";
     } else {
-        guideh3 = "0%<br>См сегментацию";
+        guideh3 = "запрет";
     } 
     
     
