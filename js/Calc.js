@@ -99,6 +99,15 @@ function Calc() {
     var tbvsk = 'Базовая ставка Вск'
     var tbergo = 'Базовая ставка Эрго' // Питер и ЛО то же самое
     var tbrgs = 'Базовая ставка Росгосстрах' // Питер и ЛО то же самое
+    var tbreso = 'Базовая ставка Ресо'
+    var tbalfa = 'Базовая ставка Альфа'
+    var tbsoglasie = 'Базовая ставка Согласие'
+    var tbarmeec = 'Базовая ставка Армеец'
+    var tbeuroins = 'Базовая ставка Евроинс'
+    var tbzetta = 'Базовая ставка Зетта'
+    var tbrenins = 'Базовая ставка Ренессанс'
+    var tbuzur = 'Базовая ставка Южурал-Аско'
+    var tbtink = 'Базовая ставка Тинькофф'
     
     if (tb == 0.5) { // Категория А, мотоциклы и тп
         tbnasko = 1579;
@@ -108,6 +117,15 @@ function Calc() {
         tbvsk = 1579;
         tbergo = 1579;
         tbrgs = 867;
+        tbreso = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 2) { // Категория В такси
         tbnasko = 6166;
@@ -117,6 +135,15 @@ function Calc() {
         tbvsk = 6166;
         tbergo = 6166;
         tbrgs = 6166;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 3) { // Категория С, 16 тонн и менее
         tbnasko = 4211;
@@ -126,6 +153,15 @@ function Calc() {
         tbvsk = 3509;
         tbergo = 4211;
         tbrgs = 3509;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 4) { // Категория С, свыше 16 тонн
         tbnasko = 5284;
@@ -135,6 +171,15 @@ function Calc() {
         tbvsk = 5284;
         tbergo = 6341;
         tbrgs = 5284;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 5) { // Кат D, Автобусы, 16 мест и медее
         tbnasko = 3370;
@@ -144,6 +189,15 @@ function Calc() {
         tbvsk = 2808;
         tbergo = 3370;
         tbrgs = 2808;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 6) { // Кат D, Автобусы, свыше 16 мест
         tbnasko = 4211;
@@ -153,6 +207,15 @@ function Calc() {
         tbvsk = 3509;
         tbergo = 4211;
         tbrgs = 3509;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 7) { // Кат D, Автобусы, такси
         tbnasko = 5138; 
@@ -162,6 +225,15 @@ function Calc() {
         tbvsk = 6166; 
         tbergo = 6166;
         tbrgs = 6166;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 8) { // Трамваи
         tbnasko = 2101;
@@ -171,6 +243,15 @@ function Calc() {
         tbvsk = 2101;
         tbergo = 2101;
         tbrgs = 2101;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 9) { // Троллейбусы
         tbnasko = 3370;
@@ -180,6 +261,15 @@ function Calc() {
         tbvsk = 3370;
         tbergo = 3370;
         tbrgs = 3370;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 10) { // Самоходки и спецтехника
         tbnasko = 1579;
@@ -189,6 +279,15 @@ function Calc() {
         tbvsk = 1124;
         tbergo = 1579;
         tbrgs = 1124;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 1 && type == 2) { // Юрики
         tbnasko = 2573;
@@ -198,6 +297,15 @@ function Calc() {
         tbvsk = 2573;
         tbergo = 2573;
         tbrgs = 2573;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     }  else if (tb == 1 && type == 1 && kt == 2) { // Москва, кат В физики
         tbnasko = 3690;
@@ -207,6 +315,15 @@ function Calc() {
         tbvsk = 4118;
         tbergo = 4118;
         tbrgs = 4118;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         
     } else if (tb == 1 && type == 1 && kt == 1.7) { // Моск обл, кат В физики
         tbnasko = 3690;
@@ -216,6 +333,16 @@ function Calc() {
         tbvsk = 4118;
         tbergo = 4118;
         tbrgs = 4118;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        
     } else {                                      // Пока что все остальное в таком формате
         tbnasko = 4118;
         tbmaks = 4118;
@@ -224,6 +351,15 @@ function Calc() {
         tbvsk = 4118;
         tbergo = 4118;
         tbrgs = 4118;
+        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
     } 
     
 
@@ -448,5 +584,41 @@ function Calc() {
     document.getElementById('result-rgs-1').innerHTML = + rgs1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-rgs-2').innerHTML = tbrgs;
     document.getElementById('result-rgs-3').innerHTML = rgs3;
+    
+    document.getElementById('result-reso-1').innerHTML = + reso1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-reso-2').innerHTML = tbreso;
+    document.getElementById('result-reso-3').innerHTML = reso3;
+    
+    document.getElementById('result-alfa-1').innerHTML = + alfa1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-alfa-2').innerHTML = tbalfa;
+    document.getElementById('result-alfa-3').innerHTML = alfa3;
+    
+    document.getElementById('result-soglasie-1').innerHTML = + soglasie1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-soglasie-2').innerHTML = tbsoglasie;
+    document.getElementById('result-soglasie-3').innerHTML = soglasie3;
+    
+    document.getElementById('result-armeec-1').innerHTML = + armeec1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-armeec-2').innerHTML = tbarmeec;
+    document.getElementById('result-armeec-3').innerHTML = armeec3;
+    
+    document.getElementById('result-euroins-1').innerHTML = + euroins1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-euroins-2').innerHTML = tbeuroins;
+    document.getElementById('result-euroins-3').innerHTML = euroins3;
+    
+    document.getElementById('result-zetta-1').innerHTML = + zetta1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-zetta-2').innerHTML = tbzetta;
+    document.getElementById('result-zetta-3').innerHTML = zetta3;
+    
+    document.getElementById('result-renins-1').innerHTML = + renins1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-renins-2').innerHTML = tbrenins;
+    document.getElementById('result-renins-3').innerHTML = renins3;
+    
+    document.getElementById('result-uzur-1').innerHTML = + uzur1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-uzur-2').innerHTML = tbuzur;
+    document.getElementById('result-uzur-3').innerHTML = uzur3;
+    
+    document.getElementById('result-tink-1').innerHTML = + tink1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-tink-2').innerHTML = tbtink;
+    document.getElementById('result-tink-3').innerHTML = tink3;
             
 		}
