@@ -92,7 +92,7 @@ function Calc() {
  */
 
     
-    var tbnasko = 'Базовая ставка Наско' // Примечание, доделать питер и ло. кат б физики по п и ло 4118
+    var tbnasko = 'Базовая ставка Наско'
     var tbmaks = 'Базовая ставка Макс'
     var tbguideh = 'Базовая ставка Гайде' // Примечание, доделать питер и ло. кат б физики по п и ло 4118
     var tbingos = 'Базовая ставка Ингосстрах'
@@ -108,6 +108,7 @@ function Calc() {
     var tbrenins = 'Базовая ставка Ренессанс'
     var tbuzur = 'Базовая ставка Южурал-Аско'
     var tbtink = 'Базовая ставка Тинькофф'
+    var tbsterh = 'Базовая ставка Стерх'
     
     if (tb == 0.5) { // Категория А, мотоциклы и тп
         tbnasko = 1579;
@@ -117,7 +118,7 @@ function Calc() {
         tbvsk = 1579;
         tbergo = 1579;
         tbrgs = 867;
-        tbreso = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 1579;
         tbalfa = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -126,6 +127,7 @@ function Calc() {
         tbrenins = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 1579; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 1579;
         
     } else if (tb == 2) { // Категория В такси
         tbnasko = 6166;
@@ -135,7 +137,7 @@ function Calc() {
         tbvsk = 6166;
         tbergo = 6166;
         tbrgs = 6166;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 6166;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -144,16 +146,36 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 6166;
+        
+    } else if (tb == 3 && kt == 1.6 || tb == 3 && kt == 1.8) { // Категория С, 16 тонн и менее ПИТЕР И Л.О.
+        tbnasko = 4000;
+        tbmaks = 3509;
+        tbguideh = 4211;
+        tbingos = 3509;
+        tbvsk = 4211;
+        tbergo = 4211;
+        tbrgs = 3509;
+        tbreso = 4211; 
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3509;
         
     } else if (tb == 3) { // Категория С, 16 тонн и менее
         tbnasko = 4211;
         tbmaks = 3509;
         tbguideh = 4211;
         tbingos = 3509;
-        tbvsk = 3509;
+        tbvsk = 4211;
         tbergo = 4211;
         tbrgs = 3509;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 4211; 
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -162,16 +184,55 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3509;
+        
+    } else if (tb == 4 && kt == 1.6 || tb == 4 && kt == 1.8) { // Категория С, свыше 16 тонн ПИТЕР И Л.О.
+        tbnasko = 6025;
+        tbmaks = 5284;
+        tbguideh = 6341;
+        tbingos = 5284;
+        tbvsk = 6341;
+        tbergo = 6341;
+        tbrgs = 5284;
+        tbreso = 5284;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 5284;
+        
+    } else if (tb == 4 && kt == 2) { // Категория С, свыше 16 тонн МОСКВА
+        tbnasko = 5284;
+        tbmaks = 5284;
+        tbguideh = 6341;
+        tbingos = 5284;
+        tbvsk = 6341;
+        tbergo = 6341;
+        tbrgs = 5284;
+        tbreso = 6341;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 5284;
         
     } else if (tb == 4) { // Категория С, свыше 16 тонн
         tbnasko = 5284;
         tbmaks = 5284;
         tbguideh = 6341;
         tbingos = 5284;
-        tbvsk = 5284;
+        tbvsk = 6341;
         tbergo = 6341;
         tbrgs = 5284;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 5284;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -180,16 +241,36 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 5284;
         
-    } else if (tb == 5) { // Кат D, Автобусы, 16 мест и медее
+    } else if (tb == 5 && kt == 1.8) { // Кат D, Автобусы, 16 мест и менее ПИТЕР
+        tbnasko = 2808;
+        tbmaks = 2808;
+        tbguideh = 3370;
+        tbingos = 2808;
+        tbvsk = 3370;
+        tbergo = 3370;
+        tbrgs = 2808;
+        tbreso = 3370;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 2808;
+        
+    } else if (tb == 5 && kt == 2) { // Кат D, Автобусы, 16 мест и менее МОСКВА
         tbnasko = 3370;
         tbmaks = 2808;
         tbguideh = 3370;
         tbingos = 2808;
-        tbvsk = 2808;
+        tbvsk = 3370;
         tbergo = 3370;
         tbrgs = 2808;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 2808;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -198,16 +279,55 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 2808;
+        
+    } else if (tb == 5) { // Кат D, Автобусы, 16 мест и менее
+        tbnasko = 3370;
+        tbmaks = 2808;
+        tbguideh = 3370;
+        tbingos = 2808;
+        tbvsk = 3370;
+        tbergo = 3370;
+        tbrgs = 2808;
+        tbreso = 3370;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 2808;
+        
+    } else if (tb == 6 && kt == 1.8) { // Кат D, Автобусы, свыше 16 мест ПИТЕР
+        tbnasko = 3509;
+        tbmaks = 3509;
+        tbguideh = 4211;
+        tbingos = 3509;
+        tbvsk = 4211;
+        tbergo = 4211;
+        tbrgs = 3509;
+        tbreso = 4211;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3509;
         
     } else if (tb == 6) { // Кат D, Автобусы, свыше 16 мест
         tbnasko = 4211;
         tbmaks = 3509;
         tbguideh = 4211;
         tbingos = 3509;
-        tbvsk = 3509;
+        tbvsk = 4211;
         tbergo = 4211;
         tbrgs = 3509;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 4211;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -216,6 +336,26 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3509;
+        
+    } else if (tb == 7 && kt == 1.6 || tb == 7 && kt == 1.8) { // Кат D, Автобусы, такси ПИТЕР И Л.О.
+        tbnasko = 5855;
+        tbmaks = 6166;
+        tbguideh = 6166;
+        tbingos = 6166;
+        tbvsk = 6166; 
+        tbergo = 6166;
+        tbrgs = 6166;
+        tbreso = 6166; 
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 6166;
         
     } else if (tb == 7) { // Кат D, Автобусы, такси
         tbnasko = 5138; 
@@ -225,7 +365,7 @@ function Calc() {
         tbvsk = 6166; 
         tbergo = 6166;
         tbrgs = 6166;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 6166; 
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -234,6 +374,7 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 6166;
         
     } else if (tb == 8) { // Трамваи
         tbnasko = 2101;
@@ -243,7 +384,7 @@ function Calc() {
         tbvsk = 2101;
         tbergo = 2101;
         tbrgs = 2101;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 2101;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -252,6 +393,7 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 2101;
         
     } else if (tb == 9) { // Троллейбусы
         tbnasko = 3370;
@@ -261,7 +403,7 @@ function Calc() {
         tbvsk = 3370;
         tbergo = 3370;
         tbrgs = 3370;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 3370;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -270,16 +412,36 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3370;
+        
+    } else if (tb == 10 && kt == 2) { // Самоходки и спецтехника МОСКВА
+        tbnasko = 1579;
+        tbmaks = 1124;
+        tbguideh = 1579;
+        tbingos = 1124;
+        tbvsk = 1579;
+        tbergo = 1579;
+        tbrgs = 1124;
+        tbreso = 1124;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 1124;
         
     } else if (tb == 10) { // Самоходки и спецтехника
         tbnasko = 1579;
         tbmaks = 1124;
         tbguideh = 1579;
         tbingos = 1124;
-        tbvsk = 1124;
+        tbvsk = 1579;
         tbergo = 1579;
         tbrgs = 1124;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 1579;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -288,16 +450,17 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 1124;
         
     } else if (tb == 1 && type == 2) { // Юрики
         tbnasko = 2573;
         tbmaks = 2573;
         tbguideh = 2573;
         tbingos = 2573;
-        tbvsk = 2573;
+        tbvsk = 3087;
         tbergo = 2573;
         tbrgs = 2573;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 2573;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -306,16 +469,17 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 2573;
         
     }  else if (tb == 1 && type == 1 && kt == 2) { // Москва, кат В физики
-        tbnasko = 3690;
+        tbnasko = 4118;
         tbmaks = 4118;
         tbguideh = 3700;
         tbingos = 4118;
         tbvsk = 4118;
         tbergo = 4118;
         tbrgs = 4118;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 3775;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -324,26 +488,9 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3432;
         
     } else if (tb == 1 && type == 1 && kt == 1.7) { // Моск обл, кат В физики
-        tbnasko = 3690;
-        tbmaks = 4118;
-        tbguideh = 4118;
-        tbingos = 4118;
-        tbvsk = 4118;
-        tbergo = 4118;
-        tbrgs = 4118;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
-        
-    } else {                                      // Пока что все остальное в таком формате
         tbnasko = 4118;
         tbmaks = 4118;
         tbguideh = 4118;
@@ -351,7 +498,7 @@ function Calc() {
         tbvsk = 4118;
         tbergo = 4118;
         tbrgs = 4118;
-        tbreso = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbreso = 4118;
         tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
@@ -360,6 +507,26 @@ function Calc() {
         tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
         tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 3432;
+        
+    } else {                                      // Пока что все остальное в таком формате
+        tbnasko = 4118; // готово
+        tbmaks = 4118;
+        tbguideh = 4118;
+        tbingos = 4118;
+        tbvsk = 4118;
+        tbergo = 4118;
+        tbrgs = 4118;
+        tbreso = 4118;
+        tbalfa = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsoglasie = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbarmeec = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbeuroins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbzetta = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbrenins = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbuzur = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbtink = 6166; //УДАЛИ КОГДА СДЕЛАЕШЬ!
+        tbsterh = 4118;
     } 
     
 
@@ -372,14 +539,18 @@ function Calc() {
     
     
     var nasko3 = "Кв Наско";
-    if ( kp < 1 || 1 > tb || tb == 2 || tb > 4) {
+    if ( kp < 1 || type == 1 && tb != 1 || kt < 1.6) {
         nasko3 = "запрет";
-    } else if ( type == 1 && km > 1.1 && tb == 1) {
-        nasko3 = "21%</br>Кроме: ГАЗ, и Ваз/Lada/Уаз и Logan, Nexia Старше 3 лет по ПТС";
-    } else if ( type == 2 && 1 < tb < 4 ) {
-        nasko3 = "21%</br>Кроме: Газ";
+    } else if ( type == 1 && kbm == 2.45 || type == 1 && kbm == 1.55 || type == 1 && kbm == 1) {
+        nasko3 = "25% (е-осаго или БСО)</br>Кроме: ГАЗ Старше 3 лет по ПТС";
+    } else if ( type == 1 && kbm == 2.3 || type == 1 && kbm == 1.4 || type == 1 && kbm < 1 && kt < 1.8) {
+        nasko3 = "25% е-осаго ; 22% БСО</br>Кроме: ГАЗ Старше 3 лет по ПТС";
+    } else if ( type == 1 && kbm < 1 && kt > 1.7) {
+        nasko3 = "27% е-осаго ; 22% БСО</br>Кроме: ГАЗ Старше 3 лет по ПТС";
+    } else if ( type == 2 && tb == 1 || type == 2 && tb == 3 || type == 2 && tb == 4 ) {
+        nasko3 = "22%</br>Кроме: Газ"; //ready ooo
     } else {
-        nasko3 = "запрет";
+        nasko3 = "запрет else";
     }
 
     
@@ -462,32 +633,24 @@ function Calc() {
 
 
     var vsk3 = "Кв Вск";
-    if (1 > tb > 4 || kt == 1.8 || kt < 1.7 || tb == 2) {
-        vsk3 = "запрет, при пролонгации<br>см сегментацию";
-    } else if (type == 2 && tb == 1) {
-        vsk3 = "10%";
-    } else if (type == 2 && tb == 3) {
+    if (type == 1 && tb != 1 || kt == 1.8 || kt < 1.7) {
+        vsk3 = "запрет";
+    } else if (type == 2 && tb == 1 && km > 1.2) {
+        vsk3 = "15%";
+    } else if (type == 2 && tb == 3 || type == 2 && tb == 4) {
         vsk3 = "5%";
-    } else if (type == 2 && tb == 4) {
-        vsk3 = "5%";
-    } else if (type == 1 && tb != 1) {
-        vsk3 = "запрет";
-    } else if (type == 1 && kp < 1) {
-        vsk3 = "запрет";
-    } else if (type == 1 && kbm > 0.95) {
-        vsk3 = "запрет";
-    } else if (type == 1 && birth > 30 && km > 1.2 && kvs == 1 && kt == 2) {
-        vsk3 = "27, при пролонгации более 100 лс<br>см сегментацию";
-    } else if (type == 1 && birth > 22 && km > 1.2 && kvs == 1 && kt == 2) {
-        vsk3 = "25, при пролонгации более 100 лс<br>см сегментацию";
-    } else if (type == 1 && birth > 22 && km > 1.2 && kvs == 1 && kt == 1.7) {
-        vsk3 = "20, при пролонгации более 100 лс<br>см сегментацию";
-    } else if (type == 1 && km > 1.2 && kvs != 1) {
-        vsk3 = "10, при пролонгации более 100 лс<br>см сегментацию";
-    } else if (type == 1 && km < 1.4 && kvs == 1 && birth > 30) {
-        vsk3 = "10, при пролонгации менее 100 лс<br>см сегментацию";
+    } else if (type == 1 && kp < 1 || type == 1 && kbm > 0.95 || type == 1 && ko == 1.8) {
+        vsk3 = "запрет,<br> при пролонгации КБМ, возр-стаж, без огран - любой";
+    } else if (type == 1 && birth > 34 && kvs == 1 && kt == 2) {
+        vsk3 = "32% новый бизнес<br> 30% пролонгация (Кбм, возр-стаж, без огранич - любой)";
+    } else if (type == 1 && birth > 34 && kvs == 1 && kt == 1.7) {
+        vsk3 = "25% новый бизнес<br> 25% пролонгация (Кбм, возр-стаж, без огранич - любой)";
+    } else if (type == 1 && birth < 35 && kvs == 1 && kt == 2) {
+        vsk3 = "25% новый бизнес<br> 30% пролонгация (Кбм, возр-стаж, без огранич - любой)";
+    } else if (type == 1 && birth < 35 && kvs == 1 && kt == 1.7) {
+        vsk3 = "20% новый бизнес<br> 25% пролонгация (Кбм, возр-стаж, без огранич - любой)";
     } else {
-        vsk3 = "запрет, при пролонгации<br>см сегментацию";
+        vsk3 = "запрет,<br> при пролонгации см сегментацию";
     }
     
     
@@ -542,6 +705,61 @@ function Calc() {
         rgs3 = "запрет";
     }
  
+
+/**
+ * Формула расчета страховой премии Стерх
+ */
+    
+
+    var sterh1 = tbsterh * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+
+
+    var sterh3 = "Кв Стерх";
+    if ( tb == 2 || tb == 7 || kp < 0.5 || kbm > 1) {
+        sterh3 = "запрет";
+    } else if ( tb > 4) {
+        sterh3 = "5%<br>по согласованию";
+    } else if (tb == 1 && km > 1 && type == 2) {
+        sterh3 = "20%<br>от 55 л.с.";
+    } else if (tb == 3 && type == 2 || tb == 4 && type == 2) {
+        sterh3 = "5%";
+    } else if (type == 1 && kvs == 1 && tb == 1 && km > 1) {
+        sterh3 = "20%";
+    } else if (type == 1 && ko == 1.8 && tb == 1 && km > 1) {
+        sterh3 = "20%";
+    } else if (type == 1 && ko == 1.8 && tb == 3 || type == 1 && ko == 1.8 && tb == 4 || type == 1 && kvs == 1 && tb == 3 || type == 1 && kvs == 1 && tb == 4) {
+        sterh3 = "5%";
+    }  else {
+        sterh3 = "запрет";
+    }
+    
+    
+/**
+ * Формула расчета страховой премии Ресо
+ */
+    
+
+    var reso1 = tbreso * kt * kbm * kvs * ko * ks * kp * km * kpr * kn;
+
+
+    var reso3 = "Кв Ресо";
+    if ( kt == 1.8 || kt < 1.7) {
+        reso3 = "запрет";
+    } else if ( tb > 4) {
+        reso3 = "5%<br>по согласованию";
+    } else if (tb == 1 && km > 1 && type == 2) {
+        reso3 = "20%<br>от 55 л.с.";
+    } else if (tb == 3 && type == 2 || tb == 4 && type == 2) {
+        reso3 = "5%";
+    } else if (type == 1 && kvs == 1 && tb == 1 && km > 1) {
+        reso3 = "20%";
+    } else if (type == 1 && ko == 1.8 && tb == 1 && km > 1) {
+        reso3 = "20%";
+    } else if (type == 1 && ko == 1.8 && tb == 3 || type == 1 && ko == 1.8 && tb == 4 || type == 1 && kvs == 1 && tb == 3 || type == 1 && kvs == 1 && tb == 4) {
+        reso3 = "5%";
+    }  else {
+        reso3 = "запрет";
+    }
     
 /**
  * Результаты формулы
@@ -584,6 +802,10 @@ function Calc() {
     document.getElementById('result-rgs-1').innerHTML = + rgs1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-rgs-2').innerHTML = tbrgs;
     document.getElementById('result-rgs-3').innerHTML = rgs3;
+    
+    document.getElementById('result-sterh-1').innerHTML = + sterh1.toFixed(2); //Огругляем до двух знаков после запятой
+    document.getElementById('result-sterh-2').innerHTML = tbsterh;
+    document.getElementById('result-sterh-3').innerHTML = sterh3;
     
     document.getElementById('result-reso-1').innerHTML = + reso1.toFixed(2); //Огругляем до двух знаков после запятой
     document.getElementById('result-reso-2').innerHTML = tbreso;
