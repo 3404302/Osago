@@ -26,17 +26,53 @@ function Calc() {
  */
     
     
-    if (birth == 22 && drive < 4) { 
-        kvs = 1.8;
-    } else if (birth > 22 && drive < 4) {
-        kvs = 1.7;
-    } else if (birth == 22 && drive > 3) {
+    if (birth == 21 && drive < 3) { 
+       kvs = 1.87;
+    } else if (birth == 21 && drive < 7) {
+       kvs = 1.66;
+    } else if (birth == 21 && drive > 5) {
+       kvs = 0;
+    } else if (21 < birth && birth < 25 && drive < 3) {
+        kvs = 1.77;
+    } else if (21 < birth && birth < 25 && drive < 10) {
+        kvs = 1.04;
+    } else if (21 < birth && birth < 25 && drive > 7) {
+        kvs = 0;
+    } else if (24 < birth && birth < 30 && drive == 0) {
+        kvs = 1.77;
+    } else if (24 < birth && birth < 30 && drive == 1) {
+        kvs = 1.69;
+    } else if (24 < birth && birth < 30 && drive == 2) {
+        kvs = 1.63;
+    } else if (24 < birth && birth < 30 && 2 < drive && drive < 10) {
+        kvs = 1.04;
+    } else if (24 < birth && birth < 30 && drive < 14) {
+        kvs = 1.01;
+    } else if (24 < birth && birth < 30 && drive == 14) {
+        kvs = 0;
+    } else if (29 < birth && birth < 60 && drive < 3) {
+        kvs = 1.63;
+    } else if (29 < birth && birth < 35 && drive < 7) {
+        kvs = 1.04;
+    } else if (29 < birth && birth < 35 && drive < 10) {
+        kvs = 1.01;
+    } else if (29 < birth && birth < 35 && drive > 7) {
+        kvs = 0.96;
+    } else if (34 < birth && birth < 40 && drive < 5) {
+        kvs = 0.99;
+    } else if (34 < birth && birth < 40 && drive > 4) {
+        kvs = 0.96;
+    } else if (39 < birth && birth < 60 && drive > 2) {
+        kvs = 0.96;
+    } else if (birth == 60 && drive < 3) {
         kvs = 1.6;
+    } else if (birth == 60 && drive > 2) {
+        kvs = 0.93;
     } else {
         kvs = 1;    
     }
+    
 
-     
 /**
  * Юр или Физ лицо, обозначаем type
  */
